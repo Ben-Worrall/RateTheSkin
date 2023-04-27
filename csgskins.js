@@ -2,7 +2,7 @@
  //import downloadjs from 'downloadjs';
  //import html2canvas from 'html2canvas';
 
- console.log('test')
+
 
 
 
@@ -1670,3 +1670,13 @@ console.log(useWidth, useHeight)
     });
 
     */
+
+
+
+    //preload all images so quick on website
+    for (let i = 0; i < LIST.length; ++i) {
+        for(let k = 0; k < LIST[i].length; k++){
+            console.log(LIST[i][k])
+
+        }
+      }
