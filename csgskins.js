@@ -1675,8 +1675,10 @@ console.log(useWidth, useHeight)
 
     //preload all images so quick on website
     for (let i = 0; i < LIST.length; ++i) {
-        for(let k = 0; k < LIST[i].length; k++){
-            console.log(LIST[i][k])
-
+        for(let k=0; k<LIST[i].length; k++){
+            //console.log(LIST[i][k])
+            var img = new Image();
+            img.src = LIST[i][k];
         }
       }
+      
