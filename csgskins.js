@@ -2,7 +2,7 @@
  //import downloadjs from 'downloadjs';
  //import html2canvas from 'html2canvas';
 
- 
+ console.log('test')
 
 
 
