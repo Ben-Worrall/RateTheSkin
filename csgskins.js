@@ -1486,6 +1486,7 @@ var all = document.getElementsByTagName('*')
                             document.getElementsByClassName('tier')[i].style.display=""
                         }
                         document.getElementById('DownloadResult').style.display=""
+                        document.getElementById('Back').style.display=""
                         //remove the image displayer
                         document.getElementById('rateboard').style.display = "none"
                         document.body.style.backgroundImage = ''
