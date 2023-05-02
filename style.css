@@ -119,18 +119,19 @@ body{
 
   }
 
-
   #FinnaDone{
+    position: relative;
+    color: aqua;
+    height: 97%;
+    width: 97%;
+    background-color: black;
+    }
+  #de_result{
   position: relative;
   color: aqua;
-  height: 97%;
-  width: 90%;
+  height: 100%;
+  width: 100%;
   background-color: black;
- 
-  
-  
-  
-  
   }
 
   .listRow{
@@ -147,7 +148,7 @@ body{
   .tier{
     border:2px solid aqua;
    text-align: center;
-    width: 10%;
+    width: 50%;
     color: black;
     position: relative;
     
@@ -156,7 +157,7 @@ body{
 
   .sorted{
     border:1px solid aqua;
-    width: 200%;
+    width: 1000%;
 	position: relative;
   background-color: black;
     
@@ -167,7 +168,8 @@ body{
     width: 10vw;
     margin-top: 1%;
     position: relative;
-    margin-left: 0.48%;
+    margin-left: 1%;
+    
   }
 
 
@@ -234,28 +236,36 @@ body{
 
   #DownloadResult{
     font-size: 150%;
-    left: 40%;
+   right: 0;
     position: relative;
-    transform: translate(0%, -40%);
-    background-color: #66e817;
-    color: #000000;
-    border:1px solid rgb(0, 0, 0);
+    background-color: #0e0d0d;
+    color: #66e817;
+    border:1px solid #66e817;
+
+    
   }
   #DownloadResult:hover{
-    background-color: #181717;
-    color: #66e817;
-    border:1px solid rgb(0, 0, 0);
+    background-color: #85180b;
+    color: #ffffff;
+    border:1px solid #000000;
     cursor: pointer;
     
   }
 
   
   #Back{
-    font-size: 100%;
-    left: 0;
+    font-size: 110%;
+    left: 80.3%;
     position: relative;
-    transform: translate(0%, 0%);
-    background-color: #66e817;
-    color: #000000;
-    border:1px solid rgb(0, 0, 0);
+    background-color: #0e0d0d;
+    color: #66e817;
+    border:2px solid #66e817;
+  }
+
+  #Back:hover{
+    background-color: #85180b;
+    color: #ffffff;
+    border:2px solid  #000000;
+    cursor: pointer;
+    
   }

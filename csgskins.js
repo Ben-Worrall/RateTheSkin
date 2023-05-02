@@ -1486,6 +1486,7 @@ var all = document.getElementsByTagName('*')
                             document.getElementsByClassName('tier')[i].style.display=""
                         }
                         document.getElementById('DownloadResult').style.display=""
+                        document.getElementById('de_result').style.display=""
                         document.getElementById('Back').style.display=""
                         //remove the image displayer
                         document.getElementById('rateboard').style.display = "none"
@@ -1618,9 +1619,9 @@ function fullscreen(){
 
 document.getElementById("DownloadResult").addEventListener('click', function () {
     
-    let useWidth = document.getElementById("FinnaDone").scrollWidth
-    let useHeight =  document.getElementById("FinnaDone").scrollHeight;
-    let Element = document.getElementById("FinnaDone")
+    let useWidth = document.getElementById("de_result").scrollWidth
+    let useHeight =  document.getElementById("de_result").scrollHeight;
+    let Element = document.getElementById("de_result")
     
     html2canvas(Element, {
         width: useWidth,
@@ -1683,3 +1684,28 @@ console.log(useWidth, useHeight)
         }
       }
       
+
+      //back button
+      document.getElementById('Back').addEventListener('click', ()=>{
+
+        for (var i=0; i < all.length; i++) {
+            if( all[i].id !== 'de_result'  && all[i].id !== 'FinnaDone' && all[i].id !== 'rateboard'  && all[i].id !== 'GameName'){
+                all[i].style.display = ""
+            } else {
+                all[i].style.display = "none"
+            }
+        }
+    
+
+        document.body.style.backgroundImage = ""
+        document.body.style.backgroundColor = 'black'
+        const removeSkin = document.querySelectorAll('.skinClass');
+        removeSkin.forEach(box => {
+            box.remove();
+        });
+    curPicAr.length = 0
+    FinalAR.length =0
+
+       
+
+      })
