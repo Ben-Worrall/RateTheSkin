@@ -1413,6 +1413,7 @@ var skinARR = [
 window.onload = function () {
     document.getElementById('options').style.display = ""
     document.getElementById('PageLoader').style.display = "none"
+    console.log('finished loading')
   };
 
 
