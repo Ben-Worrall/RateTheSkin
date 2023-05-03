@@ -1409,7 +1409,11 @@ var skinARR = [
 
 
 
-
+//after page loaded, show optoin menu
+window.onload = function () {
+    document.getElementById('options').style.display = ""
+    document.getElementById('PageLoader').style.display = "none"
+  };
 
 
 
@@ -1567,6 +1571,7 @@ var all = document.getElementsByTagName('*')
         document.getElementById('options').style.display == ""
         document.getElementById('rateboard').style.display = "none"
         document.getElementById('GameName').style.display = "none"
+        document.getElementById('PageLoader').style.display = "none"
         document.body.style.backgroundImage = ""
         document.body.style.backgroundColor = 'black'
         const removeSkin = document.querySelectorAll('.skinClass');
@@ -1696,7 +1701,7 @@ console.log(useWidth, useHeight)
             }
         }
     
-
+        document.getElementById('PageLoader').style.display = "none"
         document.body.style.backgroundImage = ""
         document.body.style.backgroundColor = 'black'
         const removeSkin = document.querySelectorAll('.skinClass');
