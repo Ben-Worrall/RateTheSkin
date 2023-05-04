@@ -1440,10 +1440,10 @@ var all = document.getElementsByTagName('*')
     if(clickC2==1){}
     if(clickC2 == 2){
     
-        //div popup for rating pics
+        //div popup for rating pics  
         document.getElementById('rateboard').style.display = ""
         var all = document.getElementsByTagName("*");
-        document.body.style.backgroundImage = "url('capsule_616x353.jpg')"
+        document.body.style.backgroundImage = "url('9shP4S.png')"
         document.body.style.backgroundRepeat = 'no-repeat'
         document.body.style.backgroundSize = "100% 100%"
         document.getElementById('options').style.display = ""

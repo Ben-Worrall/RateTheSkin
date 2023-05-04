@@ -31,15 +31,16 @@ body{
 #rateboard{
   position: absolute;
   color: aqua;
-  border:1px solid rgb(255, 0, 0);
+  border: 1px solid rgb(255, 0, 0);
   height: 50%;
   width: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-        background-color: black;
+  background-color: rgba(0,0,0,.6);
   justify-content: center;
+  
   
   
 }
@@ -85,7 +86,7 @@ body{
     color: rgb(11, 11, 58);
     background-color: rgb(244,166,32);
     font-size: 150%;
-
+    
   }
 
  
@@ -101,8 +102,8 @@ body{
     position: absolute;
     background-color: black;
     color: rgb(255, 255, 255);
-    border:1px solid rgb(0, 0, 0);
-    font-size: 90%;
+    border:1px solid rgb(255, 0, 0);
+    font-size: 80%;
     
   }
 
