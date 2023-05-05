@@ -206,10 +206,11 @@ body{
   #options::before{
     content: '';
     position: absolute;
-    background: linear-gradient(#85180b, #66e817);
+    background: linear-gradient( #66e817, #85180b);
     animation: rotate linear 4s infinite;
-    width: 50vw;
-    height: 50vw;
+    width: 100%;
+  padding-top: 100%;
+    
 
   }
   #options::after{
