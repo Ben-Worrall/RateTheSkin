@@ -1448,7 +1448,7 @@ var all = document.getElementsByTagName('*')
         document.body.style.backgroundSize = "100% 100%"
         document.getElementById('options').style.display = ""
         //blurr everything else except rateboard
-        for (let i=0; i < all.length; i++) {
+        for (let i = 0; i < all.length; i++) {
             if(all[i].id !== 'rateboard' && all[i].id !== 'body' && all[i].id !== 'head' && all[i].className !== 'skinClass'&& all[i].id !== 'bntOPT' && all[i].id !== 'html' && all[i].id !== 'content' && all[i].className !== 'bnt' && all[i].id!== 'exit'){
                 all[i].style.display = "none"
     
@@ -1461,18 +1461,25 @@ var all = document.getElementsByTagName('*')
         curPic.classList.add('skinClass')
         
         let indexNum = skinARR.indexOf(String(curSType))
-        curPicAr.push(LIST[indexNum]);
-        curPic.src = curPicAr[0][0]
+        for(let k = 0; k < LIST[indexNum].length; k++){
+            curPicAr.push(LIST[indexNum][k])
+        }
+        curPic.src = curPicAr[0]
         rateboard.appendChild(curPic)
+        
 
         
 
         //when click on button, change to next picture
         document.querySelectorAll('.bnt').forEach( button => {
             button.onclick = function () {
+
                 
+
+
+
                 //if nothing is in the picture array, then exit and go back to main screen adn display popup with the rateboar
-                if(curPicAr[0].length == 1){
+                if(curPicAr.length == 1){
                     curPic.alt = button.innerText
                     FinalAR.push(curPic.src)
                 FinalAR.push(curPic.alt)
@@ -1528,17 +1535,18 @@ var all = document.getElementsByTagName('*')
 
                 function first(){
                 //console.log('current image pushed to finalAr')
+                console.log(curPicAr[0])
                 curPic.alt = button.innerText
                 FinalAR.push(curPic.src)
                 FinalAR.push(curPic.alt)
                 //console.log(FinalAR[FinalAR.length-1])
-                curPicAr[0].splice(0,1)
+                curPicAr.splice(0,1)
                 setTimeout(second, 100)
-                
+                //console.log(LIST[indexNum])
                 }
                 
                  function second(){
-                curPic.src = curPicAr[0][0]
+                curPic.src = curPicAr[0]
                // console.log(FinalAR[FinalAR.length - 1])
                 //console.log(FinalAR[FinalAR.length - 2])
                 
@@ -1579,10 +1587,13 @@ var all = document.getElementsByTagName('*')
         removeSkin.forEach(box => {
             box.remove();
         });
-    curPicAr.length = 0
-    FinalAR.length =0
     
     
+        indexNum = 0
+        curIMG = []
+        curPic = []
+        curPicAr = []
+        FinalAR = []
       });
     
     
