@@ -202,13 +202,15 @@ body{
     font-family: serif;
     
     }
+    
   #options::before{
     content: '';
     position: absolute;
     background: linear-gradient(#85180b, #66e817);
     animation: rotate linear 4s infinite;
-    width: 23vw;
-    height: 50vh;
+    width: 50vw;
+    height: 50vw;
+
   }
   #options::after{
     content: '';
