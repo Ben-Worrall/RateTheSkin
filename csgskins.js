@@ -1443,7 +1443,7 @@ var all = document.getElementsByTagName('*')
         //div popup for rating pics  
         document.getElementById('rateboard').style.display = ""
         var all = document.getElementsByTagName("*");
-        document.body.style.backgroundImage = "url('9shP4S.png')"
+        document.body.style.backgroundImage = "url('112264.jpg')"
         document.body.style.backgroundRepeat = 'no-repeat'
         document.body.style.backgroundSize = "100% 100%"
         document.getElementById('options').style.display = ""
@@ -1643,10 +1643,11 @@ document.getElementById("DownloadResult").addEventListener('click', function () 
             anchorTag.href = canvas.toDataURL();
             anchorTag.target = '_blank';
             anchorTag.click();
+            document.getElementById("previewImg").removeChild(canvas);
 
 
             console.log(canvas.width, canvas.height)
-console.log(useWidth, useHeight)
+            console.log(useWidth, useHeight)
         })
     
 
@@ -1703,6 +1704,7 @@ console.log(useWidth, useHeight)
         }
     
         document.getElementById('PageLoader').style.display = "none"
+        document.getElementById("previewImg").removeChild(canvas);
         document.body.style.backgroundImage = ""
         document.body.style.backgroundColor = 'black'
         const removeSkin = document.querySelectorAll('.skinClass');
