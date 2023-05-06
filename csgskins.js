@@ -1441,35 +1441,57 @@ var all = document.getElementsByTagName('*')
         //div popup for rating pics  
         document.getElementById('rateboard').style.display = "none"
         var all = document.getElementsByTagName("*");
-        document.body.style.backgroundImage = "url('112264.jpg')"
-        document.body.style.backgroundRepeat = 'no-repeat'
-        document.body.style.backgroundSize = "100% 100%"
+        
         //document.getElementById('options').style.display = ""
 
+        let curSType = SkinOpt.value
+        var curPic = document.createElement('img');
+        let indexNum = skinARR.indexOf(String(curSType))
 
 
 
 
 
+
+
+
+
+        //function after choosing skin type; show loadup animation
+function loadup(){
         //show the loading screen while loading images of the selected gun
         document.getElementById('loadingscreen').style.display = ""
         document.getElementById('options').style.display = "none"
-        let curSType = SkinOpt.value
+        document.getElementById('loading').innerText = 'Loading ' +  String(curSType) + ' skins'
+
+
 
 //preload images while showing the loading screen
-let indexNum = skinARR.indexOf(String(curSType))
-for(let k = 0; k < LIST[indexNum].length; k++){
-    console.log(LIST[indexNum][k])
-    var img = new Image();
-    img.src = LIST[indexNum][k];
-}
-          
-          window.onload = (event) => {
-            document.getElementById('loadingscreen').style.display = "none"
-            document.getElementById('rateboard').style.display = ""
+        for(let k = 0; k < LIST[indexNum].length; k++){
+            console.log(LIST[indexNum][k])
+            var img = new Image();
+            img.src = LIST[indexNum][k];
+        }
 
+
+        setTimeout(displayRateBoard, 1500)
+}      
+
+//run loadup func
+loadup()
+
+
+
+
+//after loadup animation, show the rateboard with the skins
+function displayRateBoard(){
+    document.body.style.backgroundImage = "url('112264.jpg')"
+    document.body.style.backgroundRepeat = 'no-repeat'
+    document.body.style.backgroundSize = "100% 100%"
+//once prelaod images loaded
+        document.getElementById('loadingscreen').style.display = "none"
+        document.getElementById('rateboard').style.display = ""
 //display picture
-            var curPic = document.createElement('img');
+        
         curPic.classList.add('skinClass')
         
         let indexNum = skinARR.indexOf(String(curSType))
@@ -1478,17 +1500,13 @@ for(let k = 0; k < LIST[indexNum].length; k++){
         }
         curPic.src = curPicAr[0]
         rateboard.appendChild(curPic)
-          };
+}
         
-        
-
-        
-
         //when click on button, change to next picture
         document.querySelectorAll('.bnt').forEach( button => {
             button.onclick = function () {
 
-
+                
                 //if nothing is in the picture array, then exit and go back to main screen adn display popup with the rateboar
                 if(curPicAr.length == 1){
                     curPic.alt = button.innerText
@@ -1572,7 +1590,7 @@ for(let k = 0; k < LIST[indexNum].length; k++){
                 
 
                 //if images run out
-                
+                goPage()
         }
         })
 
@@ -1591,7 +1609,7 @@ for(let k = 0; k < LIST[indexNum].length; k++){
         document.getElementById('options').style.display == ""
         document.getElementById('rateboard').style.display = "none"
         document.getElementById('GameName').style.display = "none"
-        document.getElementById('PageLoader').style.display = "none"
+        document.getElementById('loadingscreen').style.display = "none"
         document.body.style.backgroundImage = ""
         document.body.style.backgroundColor = 'black'
         const removeSkin = document.querySelectorAll('.skinClass');
@@ -1729,7 +1747,7 @@ document.getElementById("DownloadResult").addEventListener('click', function () 
             }
         }
     
-        document.getElementById('PageLoader').style.display = "none"
+        document.getElementById('loadingscreen').style.display = "none"
         document.getElementById("previewImg").removeChild(canvas);
         document.body.style.backgroundImage = ""
         document.body.style.backgroundColor = 'black'
