@@ -273,18 +273,22 @@ body{
 
 
 
-
+#loadingscreen{
+  display: inline-block;
+    justify-content: center;
+    
+}
 
   #PageLoader {
-    height: 100vh;
+    height: 25vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #000;
   }
   .wave {
-    width: 5px;
-    height: 100px;
+    width: 1vw;
+    height: 90%;
     background: linear-gradient(45deg, #66e817, #85180b);
     margin: 10px;
     animation: wave 1s linear infinite;
@@ -329,3 +333,27 @@ body{
       transform: scale(0);
     }
   }
+
+  #loading{
+    color: #66e817;
+    bottom: 0;
+    font-size: 500%;
+    font-family: monospace;
+    text-align: center;
+  
+  background: linear-gradient(to right, #66e817 20%, #85180b 40%, #85180b 60%, #66e817 80%);
+  background-size: 200% auto;
+  
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  animation: shine 3s linear infinite;
+  
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}

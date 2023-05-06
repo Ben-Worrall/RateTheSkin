@@ -1410,11 +1410,7 @@ var skinARR = [
 
 
 //after page loaded, show optoin menu
-window.onload = function () {
-    document.getElementById('options').style.display = ""
-    document.getElementById('PageLoader').style.display = "none"
-    console.log('finished loading')
-  };
+
 
 
 
@@ -1439,25 +1435,41 @@ var all = document.getElementsByTagName('*')
     clickC2++
     if(clickC2==1){}
     if(clickC2 == 2){
-    
+
+        
+
         //div popup for rating pics  
-        document.getElementById('rateboard').style.display = ""
+        document.getElementById('rateboard').style.display = "none"
         var all = document.getElementsByTagName("*");
         document.body.style.backgroundImage = "url('112264.jpg')"
         document.body.style.backgroundRepeat = 'no-repeat'
         document.body.style.backgroundSize = "100% 100%"
-        document.getElementById('options').style.display = ""
-        //blurr everything else except rateboard
-        for (let i = 0; i < all.length; i++) {
-            if(all[i].id !== 'rateboard' && all[i].id !== 'body' && all[i].id !== 'head' && all[i].className !== 'skinClass'&& all[i].id !== 'bntOPT' && all[i].id !== 'html' && all[i].id !== 'content' && all[i].className !== 'bnt' && all[i].id!== 'exit'){
-                all[i].style.display = "none"
-    
-            }
-        }
-    
-        //display picture
+        //document.getElementById('options').style.display = ""
+
+
+
+
+
+
+        //show the loading screen while loading images of the selected gun
+        document.getElementById('loadingscreen').style.display = ""
+        document.getElementById('options').style.display = "none"
         let curSType = SkinOpt.value
-        var curPic = document.createElement('img');
+
+//preload images while showing the loading screen
+let indexNum = skinARR.indexOf(String(curSType))
+for(let k = 0; k < LIST[indexNum].length; k++){
+    console.log(LIST[indexNum][k])
+    var img = new Image();
+    img.src = LIST[indexNum][k];
+}
+          
+          window.onload = (event) => {
+            document.getElementById('loadingscreen').style.display = "none"
+            document.getElementById('rateboard').style.display = ""
+
+//display picture
+            var curPic = document.createElement('img');
         curPic.classList.add('skinClass')
         
         let indexNum = skinARR.indexOf(String(curSType))
@@ -1466,6 +1478,8 @@ var all = document.getElementsByTagName('*')
         }
         curPic.src = curPicAr[0]
         rateboard.appendChild(curPic)
+          };
+        
         
 
         
@@ -1473,9 +1487,6 @@ var all = document.getElementsByTagName('*')
         //when click on button, change to next picture
         document.querySelectorAll('.bnt').forEach( button => {
             button.onclick = function () {
-
-                
-
 
 
                 //if nothing is in the picture array, then exit and go back to main screen adn display popup with the rateboar
@@ -1522,7 +1533,7 @@ var all = document.getElementsByTagName('*')
                         j++
                        }
                     }
-                    goPage()
+                    
                     
                    
 
@@ -1692,6 +1703,8 @@ document.getElementById("DownloadResult").addEventListener('click', function () 
     */
 
 
+/*
+
 
     //preload all images so quick on website
     for (let i = 0; i < LIST.length; ++i) {
@@ -1701,7 +1714,9 @@ document.getElementById("DownloadResult").addEventListener('click', function () 
             img.src = LIST[i][k];
         }
       }
-      
+
+
+      */
 
       //back button
       document.getElementById('Back').addEventListener('click', ()=>{
