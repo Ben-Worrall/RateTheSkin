@@ -205,14 +205,15 @@ body{
   #options::before{
     content: '';
     position: absolute;
-    background: linear-gradient(#85180b, #66e817);
-    animation: rotate linear 4s infinite;
-    width: 100%;
-  padding-top: 100%;
+    background: linear-gradient( #1ead19, #ff0000);
+    animation: rotate linear 2s infinite;
+    width: 50vw;
+    height: 50vh;
     
 
   }
   #options::after{
+    
     content: '';
     position: absolute;
     background-color: black;
