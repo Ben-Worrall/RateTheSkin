@@ -1421,8 +1421,8 @@ var skinARR = [
 
 
 
-let curPicAr = []
-let curIMG = []
+var curPicAr = []
+var curIMG = []
 var FinalAR = [] //final array with all images it's rating
 var all = document.getElementsByTagName('*')
 
@@ -1433,7 +1433,7 @@ var all = document.getElementsByTagName('*')
         if(banner.innerText == "CS:GO"){
        
     clickC2++
-    if(clickC2==1){}
+    if(clickC2==1){ document.getElementById('invis').remove()}
     if(clickC2 == 2){
 
         
@@ -1500,6 +1500,11 @@ function displayRateBoard(){
         }
         curPic.src = curPicAr[0]
         rateboard.appendChild(curPic)
+
+
+
+
+        
 }
         
         //when click on button, change to next picture
@@ -1544,21 +1549,24 @@ function displayRateBoard(){
                         img.alt = FinalAR[k+1]
                         img.classList = "img"
                         document.getElementById(img.alt).appendChild(img)
-                            
-                        
-
 
                         j++
                        }
+                       
+
+
+                      
+        
                     }
                     
-                    
+                    goPage()
                    
 
                 }
 
 
-
+               
+      
 
 
 
@@ -1590,11 +1598,52 @@ function displayRateBoard(){
                 
 
                 //if images run out
-                goPage()
+                
         }
         })
 
-        
+
+
+         //back button
+      document.getElementById('Back').addEventListener('click', ()=>{
+
+
+        for (var i=0; i < all.length; i++) {
+            if(all[i].id !== 'rateboard'  && all[i].className !== 'bnt' && all[i].id!== 'exit'&& all[i].id !== 'FinnaDone'&& all[i].id !== 'showskin'&&all[i].className !== 'listRow' &&all[i].className !== 'sorted' &&all[i].className !== 'tier' ){
+                all[i].style.display = ""
+            }
+        }
+    
+        document.getElementById('options').style.display == ""
+        document.getElementById('rateboard').style.display = "none"
+        document.getElementById('GameName').style.display = "none"
+        document.getElementById('loadingscreen').style.display = "none"
+        document.getElementById('FinnaDone').style.display = "none"
+        document.body.style.backgroundImage = ""
+        document.body.style.backgroundColor = 'black'
+        const removeSkin = document.querySelectorAll('.skinClass');
+        removeSkin.forEach(box => {
+            box.remove();
+        });
+    
+    
+        indexNum = 0
+        curIMG = []
+        curPic = []
+        curPicAr = []
+        FinalAR = []
+        //remove skins from the final ratings board
+        let myNode = document.querySelectorAll('.sorted')
+        for(let i = 0; i < myNode.length; i ++){
+            myNode[i].innerHTML = '';
+        }
+       
+       
+
+      })
+
+
+
 
 
     //exit roatboard function
@@ -1736,28 +1785,4 @@ document.getElementById("DownloadResult").addEventListener('click', function () 
 
       */
 
-      //back button
-      document.getElementById('Back').addEventListener('click', ()=>{
-
-        for (var i=0; i < all.length; i++) {
-            if( all[i].id !== 'de_result'  && all[i].id !== 'FinnaDone' && all[i].id !== 'rateboard'  && all[i].id !== 'GameName'){
-                all[i].style.display = ""
-            } else {
-                all[i].style.display = "none"
-            }
-        }
-    
-        document.getElementById('loadingscreen').style.display = "none"
-        document.getElementById("previewImg").removeChild(canvas);
-        document.body.style.backgroundImage = ""
-        document.body.style.backgroundColor = 'black'
-        const removeSkin = document.querySelectorAll('.skinClass');
-        removeSkin.forEach(box => {
-            box.remove();
-        });
-    curPicAr.length = 0
-    FinalAR.length =0
-
-       
-
-      })
+      
