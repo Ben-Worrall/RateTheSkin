@@ -2,8 +2,9 @@
  //import downloadjs from 'downloadjs';
  //import html2canvas from 'html2canvas';
 
-
-
+//preload backgroundimage
+ var img=new Image();
+ img.src='counter-strike-global-offensive-csgo_1920x1080_xtrafondos.com.jpg';
 
 
 
