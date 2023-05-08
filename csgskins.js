@@ -1474,7 +1474,7 @@ function loadup(){
         }
 
 
-        setTimeout(displayRateBoard, 1500)
+        setTimeout(displayRateBoard, 2000)
 }      
 
 //run loadup func
@@ -1518,8 +1518,22 @@ function displayRateBoard(){
                     curPic.alt = button.innerText
                     FinalAR.push(curPic.src)
                 FinalAR.push(curPic.alt)
+
+                //show loadup animation then display the final popup with the all the ratings
+                function Showanimation(){
+                    document.getElementById('loadingscreen').style.display = ""
+                    document.getElementById('rateboard').style.display = "none"
+                    document.getElementById('loading').innerText = 'Loading Final Ratings'
+                    document.body.style.backgroundImage = ""
+                    document.body.style.backgroundColor = 'black'
+
+                    setTimeout(goPage, 1500)
+                }
+                Showanimation()
+
                     //show popup with the rating
                     function goPage(){
+                        document.getElementById('loadingscreen').style.display = "none"
                         
                         //display the final rating board
                         document.getElementById('FinnaDone').style.display = ""
@@ -1560,7 +1574,7 @@ function displayRateBoard(){
         
                     }
                     
-                    goPage()
+                    
                    
 
                 }
