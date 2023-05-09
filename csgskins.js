@@ -1,83 +1,53 @@
- //for downloading final result
- //import downloadjs from 'downloadjs';
- //import html2canvas from 'html2canvas';
+window.onload = (event) => {
+    setTimeout(showgame, 1800);
+  };
+  function showgame(){
+    document.getElementById('GameOpt').style.display = ''
+  }
+  
+
+
+
+  document.getElementById('csgo').addEventListener('click', ()=>{
+    document.getElementById('options').style.display = 'none'
+    document.getElementById('GameOpt').style.display = 'none'
+    document.getElementById('SkinOpt').style.display = ''
+    
+   setTimeout(showText, 10)
+   
+   setTimeout(showskin, 2100)
+  })
+
+  function showText(){
+    document.getElementById('gunOPTS').style.display = ""
+    document.getElementById('gunOPTS').classList.add("textAnimation") 
+}
+
+
+  function showskin(){
+document.getElementById('OPTS').style.display = ''
+  }
+
 
 //preload backgroundimage
  var img=new Image();
- img.src='counter-strike-global-offensive-csgo_1920x1080_xtrafondos.com.jpg';
+ img.src='112264.jpg';
 
 
 
-var GameOpt = document.getElementById("GameOpt") //game option
-var SkinOpt = document.getElementById("SkinOpt") //skin options
+//var GameOpt = document.getElementById("GameOpt") //game option
+//var SkinOpt = document.getElementById("SkinOpt") //skin options
 
 var banner = document.getElementById("GameName")
 
-document.getElementById('FinnaDone').style.display="none"
-document.getElementById('rateboard').style.display = "none"
-//if user chooses csgo then display the skin options
+document.getElementById('FinnaDone').style.display='none'
+document.getElementById('rateboard').style.display = 'none'
 
 
-//var tiers = Document.getElementsByClassName('tier');
-//var sorted = document.getElementsByClassName('sorted')
 
 
-let clickC1 = 0
-
-GameOpt.addEventListener('click',()=>{
-    clickC1++
-    
 
 
-if(clickC1 == 2){
-    if( document.getElementById("GameOpt").value == "CS:GO"){
-        banner.innerText = "CS:GO"
-        SkinOpt.options.length = 0;
-        //SkinOpt.options[SkinOpt.options.length] = new Option('Any')
-        SkinOpt.options[SkinOpt.options.length] = new Option('AK-47')
-        SkinOpt.options[SkinOpt.options.length] = new Option('AUG')
-        SkinOpt.options[SkinOpt.options.length] = new Option('AWP')
-        SkinOpt.options[SkinOpt.options.length] = new Option('CZ75-Auto')
-        SkinOpt.options[SkinOpt.options.length] = new Option('Desert Eagle')
-        SkinOpt.options[SkinOpt.options.length] = new Option('Dual Berettas')
-        SkinOpt.options[SkinOpt.options.length] = new Option('FAMAS')
-        SkinOpt.options[SkinOpt.options.length] = new Option('Five-SeveN')
-        SkinOpt.options[SkinOpt.options.length] = new Option('G3SG1')
-        SkinOpt.options[SkinOpt.options.length] = new Option('galil AR')
-        SkinOpt.options[SkinOpt.options.length] = new Option('Glock-18')
-        SkinOpt.options[SkinOpt.options.length] = new Option('M249')
-        SkinOpt.options[SkinOpt.options.length] = new Option('M4A1-S')
-        SkinOpt.options[SkinOpt.options.length] = new Option('M4A4')
-        SkinOpt.options[SkinOpt.options.length] = new Option('MAC-10')
-        SkinOpt.options[SkinOpt.options.length] = new Option('MAG-7')
-        SkinOpt.options[SkinOpt.options.length] = new Option('MP5-SD')
-        SkinOpt.options[SkinOpt.options.length] = new Option('MP7')
-        SkinOpt.options[SkinOpt.options.length] = new Option('MP9')
-        SkinOpt.options[SkinOpt.options.length] = new Option('Negev')
-        SkinOpt.options[SkinOpt.options.length] = new Option('Nova')
-        SkinOpt.options[SkinOpt.options.length] = new Option('P2000')
-        SkinOpt.options[SkinOpt.options.length] = new Option('P250')
-        SkinOpt.options[SkinOpt.options.length] = new Option('P90')
-        SkinOpt.options[SkinOpt.options.length] = new Option('PP-Bizon')
-        SkinOpt.options[SkinOpt.options.length] = new Option('R8 Revolver')
-        SkinOpt.options[SkinOpt.options.length] = new Option('Sawed-Off')
-        SkinOpt.options[SkinOpt.options.length] = new Option('SCAR-20')
-        SkinOpt.options[SkinOpt.options.length] = new Option('SG 553')
-        SkinOpt.options[SkinOpt.options.length] = new Option('SSG 08')
-        SkinOpt.options[SkinOpt.options.length] = new Option('Tec-9')
-        SkinOpt.options[SkinOpt.options.length] = new Option('UMP-45')
-        SkinOpt.options[SkinOpt.options.length] = new Option('USP-S')
-        SkinOpt.options[SkinOpt.options.length] = new Option('XM1014')
-        
-        
-       
-        
-
-        } 
-        clickC1 = 0
-    }
-
-})
 const skinlistuse = [
     //"Any",
     "Ak-47",
@@ -1419,7 +1389,7 @@ var skinARR = [
 //once user chooses what skin type they want then display those skins
 
 
-
+var OPTS = document.getElementById('OPTS')
 
 
 var curPicAr = []
@@ -1429,15 +1399,14 @@ var all = document.getElementsByTagName('*')
 
 
     let clickC2 = 0;
-
-    SkinOpt.addEventListener('click', ()=>{
-        if(banner.innerText == "CS:GO"){
+console.log(document.getElementById('OPTS'))
+    document.getElementById('OPTS').addEventListener('click', ()=>{
+        console.log('clicked')
        
     clickC2++
     if(clickC2==1){ document.getElementById('invis').remove()}
     if(clickC2 == 2){
-
-        
+        console.log('second clicked')
 
         //div popup for rating pics  
         document.getElementById('rateboard').style.display = "none"
@@ -1445,7 +1414,7 @@ var all = document.getElementsByTagName('*')
         
         //document.getElementById('options').style.display = ""
 
-        let curSType = SkinOpt.value
+        let curSType = OPTS.value
         var curPic = document.createElement('img');
         let indexNum = skinARR.indexOf(String(curSType))
 
@@ -1462,6 +1431,7 @@ function loadup(){
         //show the loading screen while loading images of the selected gun
         document.getElementById('loadingscreen').style.display = ""
         document.getElementById('options').style.display = "none"
+        document.getElementById('SkinOpt').style.display = "none"
         document.getElementById('loading').innerText = 'Loading ' +  String(curSType) + ' skins'
 
 
@@ -1623,15 +1593,11 @@ function displayRateBoard(){
       document.getElementById('Back').addEventListener('click', ()=>{
 
 
-        for (var i=0; i < all.length; i++) {
-            if(all[i].id !== 'rateboard'  && all[i].className !== 'bnt' && all[i].id!== 'exit'&& all[i].id !== 'FinnaDone'&& all[i].id !== 'showskin'&&all[i].className !== 'listRow' &&all[i].className !== 'sorted' &&all[i].className !== 'tier' ){
-                all[i].style.display = ""
-            }
-        }
-    
-        document.getElementById('options').style.display == ""
+       
+        document.getElementById('gunOPTS').classList.remove("textAnimation") 
+        document.getElementById('SkinOpt').style.display = ""
+        document.getElementById('options').style.display = "none"
         document.getElementById('rateboard').style.display = "none"
-        document.getElementById('GameName').style.display = "none"
         document.getElementById('loadingscreen').style.display = "none"
         document.getElementById('FinnaDone').style.display = "none"
         document.body.style.backgroundImage = ""
@@ -1695,32 +1661,14 @@ function displayRateBoard(){
         clickC2=0
     }
     
-}
+
     })
 
 
 
 
-//if user goes into fullscreen 
-function fullscreen(){
-
-    if(window.innerWidth == screen.width && window.innerHeight == screen.height) {
-        
-    document.querySelector(('#options'), '::before').style.width = "23vw"
-    document.querySelector(('#options'), '::before').style.height = "40vh"
-    //console.log(document.querySelector(('#options'), '::before'))
-
-}else {
-    
-    document.querySelector(('#options'), '::before').style.width = "23vw"
-    document.querySelector(('#options'), '::before').style.height = "49vh"
-    //console.log(document.querySelector(('#options'), '::before'))
-}
 
 
-
-    setTimeout(fullscreen, 1);
-}; fullscreen()
 
 
 

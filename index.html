@@ -17,7 +17,24 @@
 
 
 
-    <div id="content">
+<div id="content">
+
+
+
+
+
+  <div id="options" >
+    <div class="gap">
+       Choose a Game
+   </div>
+   <div id="GameOpt" style="display:none">
+       <button class="BntOpt" id="csgo">CS:GO</button>
+       <button class="BntOpt">Valorant</button>
+   </div>
+
+   </div>
+
+           
 
 
 
@@ -25,142 +42,163 @@
 
 
 
+       <div id="SkinOpt" style="display:none">
+           <div id="gunOPTS" style="display:none">Choose a Gun </div>
+           <select  id="OPTS" style="display:none">
+               <option id="invis"></option>
+               <option>AK-47</option>
+               <option>AUG</option>
+               <option>AWP</option>
+               <option>CZ75-Auto</option>
+               <option>Desert Eagle</option>
+               <option>Dual Berettas</option>
+               <option>FAMAS</option>
+               <option>Five-SeveN</option>
+               <option>G3SG1</option>
+               <option>galil AR</option>
+               <option>Glock 18</option>
+               <option>M249</option>
+               <option>M4A1-S</option>
+               <option>M4A4</option>
+               <option>MAC-10</option>
+               <option>MAG-7</option>
+               <option>MP5-SD</option>
+               <option>MP7</option>
+               <option>MP9</option>
+               <option>Negev</option>
+               <option>Nova</option>
+               <option>P2000</option>
+               <option>P250</option>
+               <option>P90</option>
+               <option>PP-Bizon</option>
+               <option>R8 Revolver</option>
+               <option>Sawed-Off</option>
+               <option>SCAR-20</option>
+               <option>SG 553</option>
+               <option>Tec-9</option>
+               <option>UMP-45</option>
+               <option>USP-S</option>
+               <option>XM1014</option>
+
+           </select class="overitem">
+
+       </div>
+      
 
 
-        <div id="options" class="asddsa">
-
-            <label class="overitem">Game: </label>
-            <select id="GameOpt" class="overitem">
-  <option style="display:none" class="overitem" id="invis"></option>
-  <option id="csgo" class="overitem">CS:GO</option>
-  <option id="valorant" class="overitem">Valorant</option>
-  
-  
-</select>
-
-
-            <label class="overitem">Guns: </label>
-            <select id="SkinOpt" class="overitem">
-</select class="overitem">
-
-<div id="GameName" style="display:none"></div>
-</div>
 
 <div id="FinnaDone">
-<button id="DownloadResult" >Download Result</button>
-  <button id="Back" >Back</button>
-<div id="de_result">
-  
-  
-  <div class="listRow">
-    <div class="tier" style="background-color: #66e817">10</div>
-    <div class="sorted" id="10"></div>
-  </div>
-  <div class="listRow">
-    <div class="tier" style="background-color: #b3df17;">9</div>
-    <div class="sorted" id="9"></div>
-  
-  </div>
-  <div class="listRow">
-    <div class="tier" style="background-color: #e0c123">8</div>
-    <div class="sorted" id="8"></div>
-  
-  </div>
-  <div class="listRow">
-    <div class="tier" style="background-color: #d89a27">7</div>
-    <div class="sorted" id="7"></div>
-  
-  </div>
-  <div class="listRow">
-    <div class="tier" style="background-color: #da7c25">6</div>
-    <div class="sorted" id="6"></div>
-  
-  </div>
-  <div class="listRow">
-    <div class="tier" style="background-color: #e1511e">5</div>
-    <div class="sorted" id="5"></div>
-  
-  </div>
-  <div class="listRow">
-    <div class="tier" style="background-color: #d14738">4</div>
-    <div   class="sorted" id="4"></div>
-  
-  </div>
-  <div class="listRow">
-    <div class="tier" style="background-color: #852d23">3</div>
-    <div   class="sorted" id="3"></div>
-  
-  </div>
-  <div class="listRow">
-    <div class="tier" style="background-color: #881c10">2</div>
-    <div   class="sorted" id="2"></div>
-  
-  </div>
-  <div class="listRow">
-    <div class="tier" style="background-color: #741409">1</div>
-    <div   class="sorted" id="1"></div>
-  
-  </div>
-
-
-</div>
-</div>
-
-
-<div id="rateboard">
-      <button id="exit">X</button>
-  <!--<div id="showskin" class="skinClass" style="background-image: url('csgo/awp/awp36.png');"></div>-->
-    <div id="bntOPT";>
-    <button class="bnt">1</button>
-    <button class="bnt">2</button>
-    <button class="bnt">3</button>
-    <button class="bnt">4</button>
-    <button class="bnt">5</button>
-    <button class="bnt">6</button>
-    <button class="bnt"> 7</button>
-    <button class="bnt">8</button>
-    <button class="bnt">9</button>
-    <button class="bnt">10</button>
+  <button id="DownloadResult" >Download Result</button>
+    <button id="Back" >Back</button>
+  <div id="de_result">
+    
+    
+    <div class="listRow">
+      <div class="tier" style="background-color: #66e817">10</div>
+      <div class="sorted" id="10"></div>
     </div>
-  </div>
-
-
-
-
+    <div class="listRow">
+      <div class="tier" style="background-color: #b3df17;">9</div>
+      <div class="sorted" id="9"></div>
+    
+    </div>
+    <div class="listRow">
+      <div class="tier" style="background-color: #e0c123">8</div>
+      <div class="sorted" id="8"></div>
+    
+    </div>
+    <div class="listRow">
+      <div class="tier" style="background-color: #d89a27">7</div>
+      <div class="sorted" id="7"></div>
+    
+    </div>
+    <div class="listRow">
+      <div class="tier" style="background-color: #da7c25">6</div>
+      <div class="sorted" id="6"></div>
+    
+    </div>
+    <div class="listRow">
+      <div class="tier" style="background-color: #e1511e">5</div>
+      <div class="sorted" id="5"></div>
+    
+    </div>
+    <div class="listRow">
+      <div class="tier" style="background-color: #d14738">4</div>
+      <div   class="sorted" id="4"></div>
+    
+    </div>
+    <div class="listRow">
+      <div class="tier" style="background-color: #852d23">3</div>
+      <div   class="sorted" id="3"></div>
+    
+    </div>
+    <div class="listRow">
+      <div class="tier" style="background-color: #881c10">2</div>
+      <div   class="sorted" id="2"></div>
+    
+    </div>
+    <div class="listRow">
+      <div class="tier" style="background-color: #741409">1</div>
+      <div   class="sorted" id="1"></div>
+    
+    </div>
   
-
-
-  <div class="progress"  id="loadingscreen" style="display:none">
-    <div id='PageLoader'>
+  
+  </div>
+  </div>
+  
+  
+  <div id="rateboard">
+        <button id="exit">X</button>
+    <!--<div id="showskin" class="skinClass" style="background-image: url('csgo/awp/awp36.png');"></div>-->
+      <div id="bntOPT";>
+      <button class="bnt">1</button>
+      <button class="bnt">2</button>
+      <button class="bnt">3</button>
+      <button class="bnt">4</button>
+      <button class="bnt">5</button>
+      <button class="bnt">6</button>
+      <button class="bnt"> 7</button>
+      <button class="bnt">8</button>
+      <button class="bnt">9</button>
+      <button class="bnt">10</button>
+      </div>
+    </div>
+  
+  
+  
+  
+    
+  
+  
+    <div class="progress"  id="loadingscreen" style="display:none">
+      <div id='PageLoader'>
+      <div class="wave"></div>
     <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-</div>
-  <div id="loading"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+    <div id="loading"></div>
+      </div>
+  
+  
+  
+  
+  
+  
     </div>
 
-
-
-
-
-
-
-
+  </div>
 </div>
 
-<div id="previewImg">
-</div>
+<div id="previewImg"></div>
 
 <script src="csgskins.js"></script>
-
-<script src="valorantskins.js"></script>
-
 </body>
 </html>
