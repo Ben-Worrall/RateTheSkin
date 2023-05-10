@@ -80,6 +80,7 @@ background-image:
   background-color: rgb(11, 11, 58);
   font-size: 150%;
   margin: 2%;
+  height: 9%;
   width: 9%;
   border-radius: 2px;
   border:1px solid rgb(0, 0, 0);
@@ -326,7 +327,7 @@ width: 20vw;
   
   #Back{
     font-size: 110%;
-    left: 80.3%;
+    float: right;
     position: relative;
     background-color: #0e0d0d;
     color: #66e817;
