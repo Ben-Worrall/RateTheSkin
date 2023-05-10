@@ -308,7 +308,7 @@ width: 20vw;
 
   #DownloadResult{
     font-size: 150%;
-    right:0;
+    left:0;
     position: relative;
     background-color: #0e0d0d;
     color: #66e817;
@@ -327,7 +327,7 @@ width: 20vw;
   
   #Back{
     font-size: 110%;
-    left:0;
+    float: right;
     position: relative;
     background-color: #0e0d0d;
     color: #66e817;
