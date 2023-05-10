@@ -327,8 +327,8 @@ width: 20vw;
   
   #Back{
     font-size: 150%;
-    right: -0%;
     position: relative;
+    right: -1%;
     background-color: #0e0d0d;
     color: #66e817;
     border:2px solid #66e817;
