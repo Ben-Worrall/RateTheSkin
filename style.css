@@ -37,8 +37,8 @@ background-image:
   position: absolute;
   color: aqua;
   border: 1px solid rgb(255, 0, 0);
-  height: 50%;
-  width: 50%;
+  height: 75%;
+  width: 75%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -169,8 +169,8 @@ background-image:
   }
 
   .img{
-    height: 16vh;
-    width: 10vw;
+    height: 20vh;
+    width: 12vw;
     margin-top: 1%;
     position: relative;
     margin-left: 1%;
