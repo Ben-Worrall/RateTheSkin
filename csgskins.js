@@ -1630,16 +1630,14 @@ function displayRateBoard(){
     //exit roatboard function
     document.getElementById('exit').addEventListener("click", function(){
     
-        for (var i=0; i < all.length; i++) {
-            if(all[i].id !== 'rateboard'  && all[i].className !== 'bnt' && all[i].id!== 'exit'&& all[i].id !== 'FinnaDone'&& all[i].id !== 'showskin'&&all[i].className !== 'listRow' &&all[i].className !== 'sorted' &&all[i].className !== 'tier' ){
-                all[i].style.display = ""
-            }
-        }
+       
     
-        document.getElementById('options').style.display == ""
+        document.getElementById('gunOPTS').classList.remove("textAnimation") 
+        document.getElementById('SkinOpt').style.display = ""
+        document.getElementById('options').style.display = "none"
         document.getElementById('rateboard').style.display = "none"
-        document.getElementById('GameName').style.display = "none"
         document.getElementById('loadingscreen').style.display = "none"
+        document.getElementById('FinnaDone').style.display = "none"
         document.body.style.backgroundImage = ""
         document.body.style.backgroundColor = 'black'
         const removeSkin = document.querySelectorAll('.skinClass');
