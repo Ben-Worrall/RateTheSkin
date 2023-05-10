@@ -1630,7 +1630,7 @@ function displayRateBoard(){
     //exit roatboard function
     document.getElementById('exit').addEventListener("click", function(){
     
-        document.getElementById('gunOPTS').classList.remove("textAnimation") 
+         document.getElementById('gunOPTS').classList.remove("textAnimation") 
         document.getElementById('SkinOpt').style.display = ""
         document.getElementById('options').style.display = "none"
         document.getElementById('rateboard').style.display = "none"
@@ -1654,12 +1654,7 @@ function displayRateBoard(){
         for(let i = 0; i < myNode.length; i ++){
             myNode[i].innerHTML = '';
         }
-    
-    
-    
-        
-        clickC2=0
-    }
+       clickC2 = 0
     
 
     })
