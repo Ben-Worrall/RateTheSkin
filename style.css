@@ -37,8 +37,8 @@ background-image:
   position: absolute;
   color: aqua;
   border: 1px solid rgb(255, 0, 0);
-  height: 50%;
-  width: 50%;
+  height: 75%;
+  width: 75%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -52,8 +52,8 @@ background-image:
 
 
   .skinClass{
-    width: 20vw;
-    height: 34vh;
+    width: 29vw;
+    height: 50vh;
     color: aliceblue;
     background-repeat:no-repeat;
     background-size: 100% 100%;
@@ -80,6 +80,7 @@ background-image:
   background-color: rgb(11, 11, 58);
   font-size: 150%;
   margin: 2%;
+  height: 9%;
   width: 9%;
   border-radius: 2px;
   border:1px solid rgb(0, 0, 0);
@@ -134,6 +135,7 @@ background-image:
   #de_result{
   position: relative;
   color: aqua;
+  margin-top: 6vh;
   height: 100%;
   width: 100%;
   background-color: black;
@@ -169,8 +171,8 @@ background-image:
   }
 
   .img{
-    height: 16vh;
-    width: 10vw;
+    height: 20vh;
+    width: 12vw;
     margin-top: 1%;
     position: relative;
     margin-left: 1%;
@@ -307,11 +309,12 @@ width: 20vw;
 
   #DownloadResult{
     font-size: 150%;
-   right: 0;
-    position: relative;
+    position: absolute;
+    top: 0px;
+    left: 0px;
     background-color: #0e0d0d;
     color: #66e817;
-    border:1px solid #66e817;
+    border:2px solid #66e817;
 
     
   }
@@ -325,9 +328,10 @@ width: 20vw;
 
   
   #Back{
-    font-size: 110%;
-    left: 80.3%;
-    position: relative;
+    font-size: 150%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
     background-color: #0e0d0d;
     color: #66e817;
     border:2px solid #66e817;
