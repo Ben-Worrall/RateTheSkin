@@ -52,8 +52,8 @@ background-image:
 
 
   .skinClass{
-    width: 29vw;
-    height: 50vh;
+    width: 40%;
+    height: 65%;
     color: aliceblue;
     background-repeat:no-repeat;
     background-size: 100% 100%;
@@ -61,7 +61,6 @@ background-image:
    margin-bottom: 8%;
    margin-top: 6%;
 
-  
   
   }
 
@@ -78,10 +77,10 @@ background-image:
 .bnt{
   color: rgb(244,166,32);
   background-color: rgb(11, 11, 58);
-  font-size: 150%;
-  margin: 2%;
-  height: 9%;
-  width: 9%;
+  font-size: 200%;
+  margin: 1%;
+  height: 15%;
+  width: 15%;
   border-radius: 2px;
   border:1px solid rgb(0, 0, 0);
   
@@ -90,7 +89,7 @@ background-image:
   .bnt:hover{
     color: rgb(11, 11, 58);
     background-color: rgb(244,166,32);
-    font-size: 150%;
+    
     
   }
 
@@ -155,9 +154,10 @@ background-image:
   .tier{
     border:2px solid aqua;
    text-align: center;
-    width: 50%;
+    width: 75%;
     color: black;
     position: relative;
+    font-size: 150%;
     
     
   }
@@ -280,7 +280,7 @@ background-color: #000;
 border-radius: 10%;
 border-color:#29f500;
 position: relative;
-width: 20vw;
+width: 75%;
 }
 
 #gunOPTS{

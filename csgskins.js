@@ -1530,6 +1530,7 @@ function displayRateBoard(){
                         let img = document.createElement('img')
                         //j is src, k+1 is alt
                         //console.log(FinalAR[j], FinalAR[k+1])
+                        if(FinalAR[j] == FinalAR[j+2]){FinalAR.remove(FinalAR[j+2])} //bug fix, remove any duplicates
                         img.src = FinalAR[j]
                         img.alt = FinalAR[k+1]
                         img.classList = "img"
@@ -1563,7 +1564,7 @@ function displayRateBoard(){
                 FinalAR.push(curPic.alt)
                 //console.log(FinalAR[FinalAR.length-1])
                 curPicAr.splice(0,1)
-                setTimeout(second, 100)
+                setTimeout(second, 1)
                 //console.log(LIST[indexNum])
                 }
                 
