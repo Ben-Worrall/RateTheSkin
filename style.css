@@ -272,7 +272,7 @@ body{
 .BntOpt:hover{
   background-color: #1a3f18;
   color: #00ff00;
-  border:2px solid  #33692b;
+  border:1px solid  #33692b;
   cursor: pointer;
 }
 
@@ -290,12 +290,12 @@ background-color: #000;
 border-radius: 10%;
 border-color:#29f500;
 position: relative;
-width: 75%;
+width: 50%;
 }
 
 #gunOPTS{
 
-    font-size: 500%;
+    font-size: 700%;
     color: #00ff00;
   }
 
