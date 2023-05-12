@@ -93,7 +93,12 @@ body{
   .bnt:hover{
     background-color: #1a3f18;
   color: #00ff00;
-  border:1px solid  #33692b;
+  font-size: 200%;
+  margin: 1%;
+  height: 15%;
+  width: 15%;
+  border-radius: 2px;
+  border:1px solid rgb(0, 0, 0);
     
   }
 
