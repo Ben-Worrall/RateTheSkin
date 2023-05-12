@@ -1398,14 +1398,9 @@ var FinalAR = [] //final array with all images it's rating
 var all = document.getElementsByTagName('*')
 
 
-    let clickC2 = 0;
+    
 console.log(document.getElementById('OPTS'))
-    document.getElementById('OPTS').addEventListener('click', ()=>{
-        console.log('clicked')
-       
-    clickC2++
-    if(clickC2==1){ document.getElementById('invis').remove()}
-    if(clickC2 == 2){
+    function clickOPT(){
         console.log('second clicked')
 
         //div popup for rating pics  
@@ -1413,8 +1408,8 @@ console.log(document.getElementById('OPTS'))
         var all = document.getElementsByTagName("*");
         
         //document.getElementById('options').style.display = ""
-
-        let curSType = OPTS.value
+console.log(document.getElementById('OPTS').value)
+        let curSType = document.getElementById('OPTS').value
         var curPic = document.createElement('img');
         let indexNum = skinARR.indexOf(String(curSType))
 
@@ -1655,13 +1650,13 @@ function displayRateBoard(){
       });
     
     
-    
-        
-        clickC2=0
     }
+        
+        
+    
     
 
-    })
+  
 
 
 

@@ -1,12 +1,15 @@
 
 body{
   background-color: black;
+  position: relative;
   pointer-events:all;
   display: flex;
   align-items: center;
   justify-content: center;
+ 
   
-  background-color: rgba(255, 255, 255,)
+  height: 100vh;
+  margin: 0;
 }
 #content{
   width:100%;
@@ -15,11 +18,12 @@ body{
  display: flex;
  justify-content: center;
  align-items: center;
- background-size: 40px 40px;
-background-image:
-  linear-gradient(to right, rgb(16, 26, 14) 1px, transparent 1px),
-  linear-gradient(to bottom, rgb(16, 26, 14) 1px, transparent 1px);
-  
+ background-size: 2vw 4vh;
+ background-image:
+ linear-gradient(to right, rgb(16, 26, 14) 1px, transparent 1px),
+ linear-gradient(to bottom, rgb(16, 26, 14) 1px, transparent 1px);
+ 
+ 
 }
 
 
@@ -36,7 +40,7 @@ background-image:
 #rateboard{
   position: absolute;
   color: aqua;
-  border: 1px solid rgb(255, 0, 0);
+  border: 1px solid #00ff00;
   height: 75%;
   width: 75%;
   top: 50%;
@@ -75,8 +79,8 @@ background-image:
     
   }
 .bnt{
-  color: rgb(244,166,32);
-  background-color: rgb(11, 11, 58);
+  color: #29f500;
+  background-color: rgb(18, 44, 24);
   font-size: 200%;
   margin: 1%;
   height: 15%;
@@ -87,9 +91,9 @@ background-image:
    
 }
   .bnt:hover{
-    color: rgb(11, 11, 58);
-    background-color: rgb(244,166,32);
-    
+    background-color: #1a3f18;
+  color: #00ff00;
+  border:2px solid  #33692b;
     
   }
 
@@ -105,9 +109,9 @@ background-image:
     right: 0;
     position: absolute;
     background-color: black;
-    color: rgb(255, 255, 255);
-    border:1px solid rgb(255, 0, 0);
-    font-size: 80%;
+    color: #29f500;
+    border:1px solid rgb(25, 85, 39);
+    font-size: 150%;
     
   }
 
@@ -118,8 +122,8 @@ background-image:
     right: 0;
     position: absolute;
     background-color: rgb(0, 0, 0);
-    color: rgb(255, 0, 0);
-    border:1px solid rgb(0, 0, 0);
+    color: rgb(25, 85, 39);
+    border:1px solid #29f500
     
 
   }
@@ -129,7 +133,7 @@ background-image:
     color: aqua;
     height: 97%;
     width: 97%;
-    background-color: black;
+    
     }
   #de_result{
   position: relative;
@@ -137,7 +141,8 @@ background-image:
   margin-top: 6vh;
   height: 100%;
   width: 100%;
-  background-color: black;
+  
+  
   }
 
   .listRow{
@@ -149,6 +154,7 @@ background-image:
     position: relative;
     float: left;
     height: 8.5;
+    
   }
   
   .tier{
@@ -158,6 +164,8 @@ background-image:
     color: black;
     position: relative;
     font-size: 150%;
+    text-align: center;
+    vertical-align: middle;
     
     
   }
@@ -166,8 +174,9 @@ background-image:
     border:1px solid aqua;
     width: 1000%;
 	position: relative;
-  background-color: black;
-    
+  background-color: black
+  
+  
   }
 
   .img{
@@ -231,8 +240,8 @@ background-image:
       margin: 0 auto; /* Gives that scrolling effect as the typing happens */
       letter-spacing: .15em; /* Adjust as needed */
       animation: 
-      typing 2s steps(40, end),
-      blink-caret .75s step-end infinite;
+      typing 1.75s steps(40, end),
+      blink-caret .7s step-end infinite;
     }
     @keyframes typing {
       from { width: 0 }
@@ -274,6 +283,7 @@ align-items: center;
 text-align: center;
 }
 #OPTS{
+  text-align: center;
 font-size: 300%;
 color: #00ff00;
 background-color: #000;
