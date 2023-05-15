@@ -1,31 +1,32 @@
 
 body{
-  background-color: black;
+  background-color: rgb(2, 5, 3);
   position: relative;
   pointer-events:all;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: 2vw 4vh;
-  background-image:
-  linear-gradient(to right, rgb(16, 26, 14) 1px, transparent 1px),
-  linear-gradient(to bottom, rgb(16, 26, 14) 1px, transparent 1px);
   
   height: 100vh;
   margin: 0;
 }
 #content{
   width:100%;
-  height:97vh;
-  position: relative;
- display: flex;
- justify-content: center;
- align-items: center;
+  height:95vh;
+  position: absolute;
+ margin-top: 4vh;
  
  
  
 }
 
+#time{
+  color: #00ff00;
+  top: 0;
+  left: 0;
+  position: absolute;
+  text-shadow:0vh 0vh 3vh rgb(48, 141, 48),0vh 0vh 3vh rgb(52, 131, 52);
+}
 
 
 #GameName{
@@ -194,15 +195,7 @@ body{
   }
 
 
-  select {
-    font-size: 30%;
-    background-color: black;
-    color: white;
-    border-radius: 15%;
-    border-color: rgb(39, 38, 38);
-    width: 9vw;
-    font-family:Arial, Helvetica, sans-serif;
-  }
+  
 
  
 
@@ -223,48 +216,14 @@ body{
 
 
     
-    .gap{
-      font-size: 200%;
-      overflow: hidden; /* Ensures the content is not revealed until the animation */
-      border-right: .15em solid rgb(0, 255, 0); /* The typwriter cursor */
-      white-space: nowrap; /* Keeps the content on a single line */
-      margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-      letter-spacing: .15em; /* Adjust as needed */
-      animation: 
-      typing 1.75s steps(40, end),
-      blink-caret .7s step-end infinite;
-      text-shadow:1px 1px 10px rgb(48, 141, 48), 1px 1px 10px rgb(52, 131, 52);
-          
-    }
-
-    .textAnimation{
-      font-size: 200%;
-      overflow: hidden; /* Ensures the content is not revealed until the animation */
-      border-right: .15em solid rgb(0, 255, 0); /* The typwriter cursor */
-      white-space: nowrap; /* Keeps the content on a single line */
-      margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-      letter-spacing: .15em; /* Adjust as needed */
-      animation: 
-      typing 1.75s steps(40, end),
-      blink-caret .7s step-end infinite;
-    }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
     
-    /* The typewriter cursor effect */
-    @keyframes blink-caret {
-      from, to { border-color: transparent }
-      40% { border-color: rgb(0, 255, 21); }
-      
-    }
+
+    
   #GameOpt{
       font-size: 200%;
       color: aqua;
       left: 50%;
-      display: flex;
-      justify-content: center;
+      
   }
 .BntOpt{
   font-size: 80%;
@@ -283,26 +242,64 @@ body{
 
 
 #SkinOpt{
-display: inline-block;
-align-items: center;
-text-align: center;
-}
-#OPTS{
-  text-align: center;
-font-size: 300%;
-color: #00ff00;
-background-color: #000;
-border-radius: 10%;
-border-color:#29f500;
+width: 80vw;
 position: relative;
-width: 50%;
+
 }
 
-#gunOPTS{
-
-    font-size: 700%;
+#Gaben{
+  display: inline-block;
+  
+    font-size: 130%;
     color: #00ff00;
+    text-shadow:0vh 0vh 3vh rgb(48, 141, 48),0vh 0vh 3vh rgb(52, 131, 52);
+    font-family: Consolas,monaco,monospace; 
   }
+  #GabenReply{
+    display: inline-block;
+    margin: 1%;
+     color: #00ff00;
+     text-shadow:0vh 0vh 0.6vh rgb(48, 141, 48),0vh 0vh 0.6vh rgb(52, 131, 52);
+     font-family: 'Courier', 'Courier New', 'Lucida Console';
+     font-size: 135%;
+   }
+   
+   #User{
+    display: inline-block;
+      font-size: 130%;
+      color: #00ff00;
+      text-shadow:0vh 0vh 3vh rgb(48, 141, 48),0vh 0vh 3vh rgb(52, 131, 52);
+      font-family: Consolas,monaco,monospace; 
+    }
+    #UserReply{
+      display: inline-block;
+      margin: 0.7%;
+       color: #00ff00;
+       
+       font-family: 'Courier', 'Courier New', 'Lucida Console';
+       font-size: 105%;
+       outline: none;
+       
+       
+       
+     }
+
+#inputfield{
+      color: #00ff00;
+      border: 10px solid rgb(2, 5, 3);
+       text-shadow:0vh 0vh 0.6vh rgb(48, 141, 48),0vh 0vh 0.6vh rgb(52, 131, 52);
+       font-family: 'Courier', 'Courier New', 'Lucida Console';
+       font-size: 130%;
+       outline: none;
+      background-color:  rgb(2, 5, 3);
+      
+}
+
+    
+   
+
+
+
 
 
 

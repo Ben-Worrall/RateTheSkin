@@ -1,33 +1,19 @@
 window.onload = (event) => {
-    setTimeout(showgame, 1800);
-  };
-  function showgame(){
-    document.getElementById('GameOpt').style.display = ''
-  }
-  
-
-
-
-  document.getElementById('csgo').addEventListener('click', ()=>{
-    document.getElementById('options').style.display = 'none'
-    document.getElementById('GameOpt').style.display = 'none'
     document.getElementById('SkinOpt').style.display = ''
-    
-   setTimeout(showText, 10)
-   
-   setTimeout(showskin, 2100)
-  })
-
-  function showText(){
-    document.getElementById('gunOPTS').style.display = ""
-    document.getElementById('gunOPTS').classList.add("textAnimation") 
-}
-
-
-  function showskin(){
-document.getElementById('OPTS').style.display = ''
+    document.getElementById('OPTS').style.display = ''
+  };
+  
+  function date(){
+const date = new Date();
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+let time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+// This arrangement can be altered based on how we want the date's format to appear.
+let currentDate = `${day}/${month}/${year}`;
+document.getElementById('time').innerHTML = "Date: "+currentDate + " " + time
   }
-
+  window.setInterval(date, 1)
 
 //preload backgroundimage
  var img=new Image();
@@ -1425,8 +1411,7 @@ console.log(document.getElementById('OPTS').value)
 function loadup(){
         //show the loading screen while loading images of the selected gun
         document.getElementById('loadingscreen').style.display = ""
-        document.getElementById('options').style.display = "none"
-        document.getElementById('SkinOpt').style.display = "none"
+        document.getElementById('SkinOpt').style.display = 'none'
         document.getElementById('loading').innerText = 'Loading ' +  String(curSType) + ' skins'
 
 
@@ -1516,7 +1501,6 @@ function displayRateBoard(){
                         document.getElementById('Back').style.display=""
                         //remove the image displayer
                         document.getElementById('rateboard').style.display = "none"
-                        document.getElementById('content').style.backgroundImage = ""
                         
                         
 
@@ -1593,7 +1577,6 @@ function displayRateBoard(){
        
         document.getElementById('gunOPTS').classList.remove("textAnimation") 
         document.getElementById('SkinOpt').style.display = ""
-        document.getElementById('options').style.display = "none"
         document.getElementById('rateboard').style.display = "none"
         document.getElementById('loadingscreen').style.display = "none"
         document.getElementById('FinnaDone').style.display = "none"
@@ -1631,7 +1614,7 @@ function displayRateBoard(){
     
         document.getElementById('gunOPTS').classList.remove("textAnimation") 
         document.getElementById('SkinOpt').style.display = ""
-        document.getElementById('options').style.display = "none"
+        
         document.getElementById('rateboard').style.display = "none"
         document.getElementById('loadingscreen').style.display = "none"
         document.getElementById('FinnaDone').style.display = "none"
