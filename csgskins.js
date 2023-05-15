@@ -1516,7 +1516,8 @@ function displayRateBoard(){
                         document.getElementById('Back').style.display=""
                         //remove the image displayer
                         document.getElementById('rateboard').style.display = "none"
-                        document.body.style.backgroundImage = ''
+                        document.getElementById('content').style.backgroundImage = ""
+                        
                         
 
                        //add all the images according to the rating compared tot eh number on the tier list

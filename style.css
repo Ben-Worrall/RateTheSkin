@@ -6,7 +6,10 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
- 
+  background-size: 2vw 4vh;
+  background-image:
+  linear-gradient(to right, rgb(16, 26, 14) 1px, transparent 1px),
+  linear-gradient(to bottom, rgb(16, 26, 14) 1px, transparent 1px);
   
   height: 100vh;
   margin: 0;
@@ -18,10 +21,7 @@ body{
  display: flex;
  justify-content: center;
  align-items: center;
- background-size: 2vw 4vh;
- background-image:
- linear-gradient(to right, rgb(16, 26, 14) 1px, transparent 1px),
- linear-gradient(to bottom, rgb(16, 26, 14) 1px, transparent 1px);
+ 
  
  
 }
@@ -146,7 +146,7 @@ body{
   margin-top: 6vh;
   height: 100%;
   width: 100%;
-  
+  background-color: #000;
   
   }
 
@@ -233,7 +233,7 @@ body{
       animation: 
       typing 1.75s steps(40, end),
       blink-caret .7s step-end infinite;
-      
+      text-shadow:1px 1px 10px rgb(48, 141, 48), 1px 1px 10px rgb(52, 131, 52);
           
     }
 
