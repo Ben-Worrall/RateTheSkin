@@ -15,7 +15,7 @@ body{
   height:95vh;
   position: absolute;
  margin-top: 4vh;
- 
+ display: flex;
  
  
 }
@@ -243,8 +243,7 @@ body{
 
 #SkinOpt{
 width: 80vw;
-position: relative;
-
+display: inline-block;
 }
 
 #Gaben{
@@ -296,9 +295,20 @@ position: relative;
 }
 
     
-   
+   #gunList{
+    display: inline-block;
+    border: 0.1vw solid #00ff00;
+    color: #00ff00;
+    text-shadow:0vh 0vh 0.3vh rgb(48, 141, 48),0vh 0vh 0.3vh rgb(52, 131, 52);
+    height: max-content;
+    box-shadow: 0vh 0vh 0.6vh rgb(48, 141, 48),0vh 0vh 0.6vh rgb(52, 131, 52);;
+   }
 
-
+#gunList p{
+  margin-left: 1vw;
+  margin-right: 1vw;
+  font-family: 'Courier', 'Courier New', 'Lucida Console';
+}
 
 
 
