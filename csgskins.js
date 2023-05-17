@@ -1400,13 +1400,18 @@ var NumForArr = [
     ['xm1014', 'xm']
 
 ]
-// NumForArr.length = 33
 
-//when user clicks on rating button
+
 function ClickedDown(){
-document.getElementById().style.backgroundColor = "black"
-console.log()
-}
+   
+    
+    }
+var allbnts = document.getElementsByClassName('bnt')
+for(let i = 0; i<allbnts.length; i++){
+    allbnts[i].addEventListener("click", ClickedDown)
+};
+//when user clicks on rating button
+
 
 
 
