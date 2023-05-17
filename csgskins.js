@@ -25,7 +25,7 @@ var banner = document.getElementById("GameName")
 document.getElementById('WebName').style.display = "none"
 document.getElementById('FinnaDone').style.display='none'
 document.getElementById('rateboard').style.display = 'none'
-
+document.getElementById('logo').style.display = "none"
 
 
 
@@ -1402,10 +1402,12 @@ var NumForArr = [
 ]
 // NumForArr.length = 33
 
+//when user clicks on rating button
+function ClickedDown(){
+document.getElementById().style.backgroundColor = "black"
+console.log()
+}
 
-
-
-//once user chooses what skin type they want then display those skins
 
 
 var OPTS = document.getElementById('OPTS')
@@ -1455,26 +1457,23 @@ for(let k = 0; k < LIST[indexNum].length; k++){
 
 
 let j = 0
-function list(){
-    if(j>=curPicAr.length){
-        clearInterval(list)
-        displayRateBoard()
-        
-    } else {
 
 
-        console.log(j)
+var timer = setInterval(function() {
+    console.log(j)
         let div = document.createElement('div')
         div.classList.add('loadup')
         div.innerText = curPicAr[j]
         document.getElementById('PageLoader').appendChild(div)
         j++
         document.getElementById('PageLoader').scrollIntoView(false);
+    if (j>=curPicAr.length) {
+        clearInterval(timer) 
+        displayRateBoard();
+        console.log('post-interval');
     }
-
-        
-}
-setInterval(list, 200)
+     // interval will be cleared after completing this whole block
+  }, 200);
 
 
     
@@ -1494,6 +1493,7 @@ function displayRateBoard(){
 
 
 //once prelaod images loaded
+document.getElementById('logo').style.display = ""
 document.getElementById('WebName').style.display = ""
 document.getElementById('body').style.backgroundColor = 'blue'
 document.getElementById('loadingscreen').style.display = "none"

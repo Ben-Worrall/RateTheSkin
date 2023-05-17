@@ -39,7 +39,13 @@ body{
   font-family: Consolas,monaco,monospace; 
   
 }
-
+#logo{
+  width: 12vw;
+  height: 23vh;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
 #GameName{
   text-align: center;
   color: aliceblue;
@@ -52,14 +58,14 @@ body{
 #rateboard{
   position: absolute;
   color: aqua;
-  border: 1vh solid #ffffff;
+  border: 1vh solid #636364;
   height: 75%;
   width: 75%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  background-color: #0E209C;
+  background-color: #ababad;
   justify-content: center;
   box-shadow: 2.5vh 2.5vh 0vh rgb(0, 0, 0),2.5vh 2.5vh 0vh rgb(0, 0, 0);;
   
@@ -70,14 +76,15 @@ body{
   .skinClass{
     width: 40%;
     height: 65%;
-    color: aliceblue;
+    
     background-repeat:no-repeat;
     background-size: 100% 100%;
    position: relative;
    margin-bottom: 8%;
    margin-top: 6%;
-
-  
+   border:1px solid rgb(197, 197, 197);
+   color: #000000;
+   box-shadow: .5vh .5vh 0vh rgb(59, 59, 59),.5vh .5vh 0vh rgb(59, 59, 59);;
   }
 
 
@@ -91,30 +98,27 @@ body{
     
   }
 .bnt{
-  
-  background-color: rgb(18, 44, 24, .0);
+  border:1px solid rgb(197, 197, 197);
+  background-color: #ababad;
   font-size: 200%;
   margin: 1%;
   height: 15%;
   width: 15%;
+  font-family: 'Courier', 'Courier New', 'Lucida Console';
+     font-size: 135%;
   border-radius: 2px;
-  border:.5vh solid #ffffff;
-  color: #ffffff;
+  color: #000000;
+  box-shadow: .5vh .5vh 0vh rgb(59, 59, 59),.5vh .5vh 0vh rgb(59, 59, 59);;
   
-    font-family: Consolas,monaco,monospace; 
     
 }
   .bnt:hover{
-  background-color: #0822ca;
-  color: #00ff00;
-  font-size: 200%;
-  margin: 1%;
-  height: 15%;
-  width: 15%;
+  
+  color: #0822ca;
   border-radius: 2px;
   
   
-    font-family: Consolas,monaco,monospace; 
+   
     
     
   }
@@ -130,8 +134,8 @@ body{
     top: 0;
     right: 0;
     position: absolute;
-    background-color: rgb(255, 255, 255);
-    color: #f50000;
+    background-color: rgb(175, 174, 174);
+    color: #000000;
     border:1px solid rgb(0, 0, 0);
     font-size: 150%;
     
@@ -143,9 +147,8 @@ body{
     top: 0;
     right: 0;
     position: absolute;
-    color: #00ff00;
-    
-
+    color: white;
+    background-color: rgb(205,6,0);
   }
 
   #FinnaDone{
