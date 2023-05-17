@@ -1,7 +1,4 @@
-window.onload = (event) => {
-    document.getElementById('SkinOpt').style.display = ''
-    document.getElementById('OPTS').style.display = ''
-  };
+
   
   function date(){
 const date = new Date();
@@ -25,7 +22,7 @@ document.getElementById('time').innerHTML = "Date: "+currentDate + " " + time
 //var SkinOpt = document.getElementById("SkinOpt") //skin options
 
 var banner = document.getElementById("GameName")
-
+document.getElementById('WebName').style.display = "none"
 document.getElementById('FinnaDone').style.display='none'
 document.getElementById('rateboard').style.display = 'none'
 
@@ -1366,8 +1363,44 @@ var skinARR = [
 
 
 
-//after page loaded, show optoin menu
+var NumForArr = [
+    ['ak-47', 'ak47', 'ak'],
+    ['aug'],
+    ['awp'],
+    ['cz75-auto', 'cz75', 'cz'],
+    ['desert eagle', 'deagle'],
+    ['dual berettas', 'duallies'],
+    ['famas'],
+    ['five-seven', 'fiveseven', '5.7'],
+    ['g3sg1'],
+    ['galil ar', 'galil'],
+    ['glock-18', 'glock18', 'glock'],
+    ['m249'],
+    ['m4a1-s', 'm4a1s', 'a1s'],
+    ['m4a4', 'a4'],
+    ['mac-10', 'mac10'],
+    ['mag-7', 'mag7'],
+    ['mp5-sd', 'mp5'],
+    ['mp7'],
+    ['mp9'],
+    ['negev'],
+    ['nova'],
+    ['p2000', 'p2k'],
+    ['p250'],
+    ['p90'],
+    ['pp-bizon', 'ppbizon', 'pp'],
+    ['r8 revolver', 'revlover', 'r8'],
+    ['sawed-off', 'sawedoff'],
+    ['scar-20', 'scar20', 'scar'],
+    ['sg 553', 'sg'],
+    ['ssg 08', 'ssg', 'scout'],
+    ['tec-9', 'tec9'],
+    ['ump-45', 'ump45', 'ump'],
+    ['usp-s','usps', 'usp'],
+    ['xm1014', 'xm']
 
+]
+// NumForArr.length = 33
 
 
 
@@ -1384,7 +1417,311 @@ var FinalAR = [] //final array with all images it's rating
 var all = document.getElementsByTagName('*')
 
 
+
+//when user hits enter after requesting a gun
+function enter(ele) {
+    if(event.key === 'Enter') {
+        let userSearch = ele.value   
+        for(let i = 0; i < NumForArr.length; i++){
+           for(let k = 0; k < NumForArr[i].length; k++){
+            if(userSearch.toLowerCase() == NumForArr[i][k].toLowerCase()){
+console.log(NumForArr[i][k].toLowerCase())
+              
+
+//div popup for rating pics  
+document.getElementById('rateboard').style.display = "none"
+var all = document.getElementsByTagName("*");
+
+
+
+var curPic = document.createElement('img');
+let indexNum = i
+
+//function after choosing skin type; show loadup animation
+function loadup(){
+//show the loading screen while loading images of the selected gun
+document.getElementById('loadingscreen').style.display = ""
+document.getElementById('SkinOpt').style.display = 'none'
+document.getElementById('gunList').style.display = 'none'
+
+//preload images while showing the loading screen
+//and add the current set of skins to curPicAr
+for(let k = 0; k < LIST[indexNum].length; k++){
+    console.log(LIST[indexNum][k])
+    var img = new Image();
+    img.src = LIST[indexNum][k];
+    curPicAr.push(LIST[indexNum][k])
+}
+
+
+let j = 0
+function list(){
+    if(j>=curPicAr.length){
+        clearInterval(list)
+        displayRateBoard()
+        
+    } else {
+
+
+        console.log(j)
+        let div = document.createElement('div')
+        div.classList.add('loadup')
+        div.innerText = curPicAr[j]
+        document.getElementById('PageLoader').appendChild(div)
+        j++
+        document.getElementById('PageLoader').scrollIntoView(false);
+    }
+
+        
+}
+setInterval(list, 200)
+
+
     
+}      
+
+
+//run loadup func
+loadup()
+
+
+
+
+//after loadup animation, show the rateboard with the skins
+
+function displayRateBoard(){
+
+
+
+//once prelaod images loaded
+document.getElementById('WebName').style.display = ""
+document.getElementById('body').style.backgroundColor = 'blue'
+document.getElementById('loadingscreen').style.display = "none"
+document.getElementById('time').style.display = "none"
+document.getElementById('rateboard').style.display = ""
+//display picture
+
+curPic.classList.add('skinClass')
+
+let indexNum = i
+for(let k = 0; k < LIST[indexNum].length; k++){
+    curPicAr.push(LIST[indexNum][k])
+}
+curPic.src = curPicAr[0]
+rateboard.appendChild(curPic)
+
+
+
+
+
+}
+
+//when click on button, change to next picture
+document.querySelectorAll('.bnt').forEach( button => {
+    button.onclick = function () {
+
+        
+        //if nothing is in the picture array, then exit and go back to main screen adn display popup with the rateboar
+        if(curPicAr.length == 1){
+            curPic.alt = button.innerText
+            FinalAR.push(curPic.src)
+        FinalAR.push(curPic.alt)
+
+        //show loadup animation then display the final popup with the all the ratings
+        function Showanimation(){
+            document.getElementById('loadingscreen').style.display = ""
+            document.getElementById('WebName').style.display = "none"
+            document.getElementById('rateboard').style.display = "none"
+            document.getElementById('loading').innerText = 'Loading Final Ratings'
+            document.body.style.backgroundImage = ""
+            document.body.style.backgroundColor = 'black'
+
+            setTimeout(goPage, 1500)
+        }
+        Showanimation()
+
+            //show popup with the rating
+            function goPage(){
+                document.getElementById('loadingscreen').style.display = "none"
+                
+                //display the final rating board
+                document.getElementById('FinnaDone').style.display = ""
+                for(let i = 0; i < document.getElementsByClassName('listRow').length; i++){
+                    document.getElementsByClassName('listRow')[i].style.display=""
+                }
+                for(let i = 0; i < document.getElementsByClassName('sorted').length; i++){
+                    document.getElementsByClassName('sorted')[i].style.display=""
+                }
+                for(let i = 0; i < document.getElementsByClassName('tier').length; i++){
+                    document.getElementsByClassName('tier')[i].style.display=""
+                }
+                document.getElementById('DownloadResult').style.display=""
+                document.getElementById('de_result').style.display=""
+                document.getElementById('Back').style.display=""
+                //remove the image displayer
+                document.getElementById('rateboard').style.display = "none"
+                
+                
+
+               //add all the images according to the rating compared tot eh number on the tier list
+               for(let j = 0; j < FinalAR.length; j++){
+                let k = j
+                let img = document.createElement('img')
+                //j is src, k+1 is alt
+                //console.log(FinalAR[j], FinalAR[k+1])
+                if(FinalAR[j] == FinalAR[j+2]){FinalAR.remove(FinalAR[j+2])} //bug fix, remove any duplicates
+                img.src = FinalAR[j]
+                img.alt = FinalAR[k+1]
+                img.classList = "img"
+                document.getElementById(img.alt).appendChild(img)
+
+                j++
+               }
+               
+
+
+              
+
+            }
+            
+            
+           
+
+        }
+
+
+       
+
+
+
+
+        function first(){
+        //console.log('current image pushed to finalAr')
+        console.log(curPicAr[0])
+        curPic.alt = button.innerText
+        FinalAR.push(curPic.src)
+        FinalAR.push(curPic.alt)
+        //console.log(FinalAR[FinalAR.length-1])
+        curPicAr.splice(0,1)
+        setTimeout(second, 1)
+        //console.log(LIST[indexNum])
+        }
+        
+         function second(){
+        curPic.src = curPicAr[0]
+       // console.log(FinalAR[FinalAR.length - 1])
+        //console.log(FinalAR[FinalAR.length - 2])
+        
+        
+        
+         }
+    first()
+        
+        
+        
+        
+        
+
+        //if images run out
+        
+}
+})
+
+
+
+ //back button
+document.getElementById('Back').addEventListener('click', ()=>{
+
+
+
+document.getElementById('gunOPTS').classList.remove("textAnimation") 
+document.getElementById('SkinOpt').style.display = ""
+document.getElementById('rateboard').style.display = "none"
+document.getElementById('loadingscreen').style.display = "none"
+document.getElementById('FinnaDone').style.display = "none"
+document.body.style.backgroundImage = ""
+document.body.style.backgroundColor = 'black'
+const removeSkin = document.querySelectorAll('.skinClass');
+removeSkin.forEach(box => {
+    box.remove();
+});
+
+
+indexNum = 0
+curIMG = []
+curPic = []
+curPicAr = []
+FinalAR = []
+//remove skins from the final ratings board
+let myNode = document.querySelectorAll('.sorted')
+for(let i = 0; i < myNode.length; i ++){
+    myNode[i].innerHTML = '';
+}
+
+
+
+})
+
+
+
+
+
+//exit roatboard function
+document.getElementById('exit').addEventListener("click", function(){
+
+
+
+document.getElementById('gunOPTS').classList.remove("textAnimation") 
+document.getElementById('SkinOpt').style.display = ""
+
+document.getElementById('rateboard').style.display = "none"
+document.getElementById('loadingscreen').style.display = "none"
+document.getElementById('FinnaDone').style.display = "none"
+document.body.style.backgroundImage = ""
+document.body.style.backgroundColor = 'black'
+const removeSkin = document.querySelectorAll('.skinClass');
+removeSkin.forEach(box => {
+    box.remove();
+});
+
+
+indexNum = 0
+curIMG = []
+curPic = []
+curPicAr = []
+FinalAR = []
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+            }
+           }
+        }
+        
+
+
+    }
+}
+
+
+
+/*
+
 console.log(document.getElementById('OPTS'))
     function clickOPT(){
         console.log('second clicked')
@@ -1636,7 +1973,7 @@ function displayRateBoard(){
     
     }
         
-        
+        */
     
     
 

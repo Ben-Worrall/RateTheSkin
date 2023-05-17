@@ -27,7 +27,18 @@ body{
   position: absolute;
   text-shadow:0vh 0vh 3vh rgb(48, 141, 48),0vh 0vh 3vh rgb(52, 131, 52);
 }
-
+#WebName{
+  margin-top: 2vw;
+  
+  top: 0;
+  left: 0;
+  position: absolute;
+  color: #f50000;
+  background-color: white;
+  font-size: 200%;
+  font-family: Consolas,monaco,monospace; 
+  
+}
 
 #GameName{
   text-align: center;
@@ -41,16 +52,16 @@ body{
 #rateboard{
   position: absolute;
   color: aqua;
-  border: 1px solid #00ff00;
+  border: 1vh solid #ffffff;
   height: 75%;
   width: 75%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  background-color: rgba(0,0,0,.6);
+  background-color: #0E209C;
   justify-content: center;
-  
+  box-shadow: 2.5vh 2.5vh 0vh rgb(0, 0, 0),2.5vh 2.5vh 0vh rgb(0, 0, 0);;
   
   
 }
@@ -80,26 +91,31 @@ body{
     
   }
 .bnt{
-  color: #29f500;
-  background-color: rgb(18, 44, 24);
+  
+  background-color: rgb(18, 44, 24, .0);
   font-size: 200%;
   margin: 1%;
   height: 15%;
   width: 15%;
   border-radius: 2px;
-  border:1px solid rgb(0, 0, 0);
+  border:.5vh solid #ffffff;
+  color: #ffffff;
   
-   
+    font-family: Consolas,monaco,monospace; 
+    
 }
   .bnt:hover{
-    background-color: #1a3f18;
+  background-color: #0822ca;
   color: #00ff00;
   font-size: 200%;
   margin: 1%;
   height: 15%;
   width: 15%;
   border-radius: 2px;
-  border:1px solid rgb(0, 0, 0);
+  
+  
+    font-family: Consolas,monaco,monospace; 
+    
     
   }
 
@@ -114,9 +130,9 @@ body{
     top: 0;
     right: 0;
     position: absolute;
-    background-color: black;
-    color: #29f500;
-    border:1px solid rgb(25, 85, 39);
+    background-color: rgb(255, 255, 255);
+    color: #f50000;
+    border:1px solid rgb(0, 0, 0);
     font-size: 150%;
     
   }
@@ -127,9 +143,7 @@ body{
     top: 0;
     right: 0;
     position: absolute;
-    background-color: rgb(0, 0, 0);
-    color: rgb(25, 85, 39);
-    border:1px solid #29f500
+    color: #00ff00;
     
 
   }
@@ -312,9 +326,25 @@ display: inline-block;
 
 
 
-
-
-
+.loadup{
+  font-family: Consolas,monaco,monospace; 
+  margin-left: 1vw;
+  color: #00ff00;
+  text-shadow:0vh 0vh 3vh rgb(48, 141, 48),0vh 0vh 3vh rgb(52, 131, 52);
+  font-size: 130%;
+  width: 99%;
+  margin-top: 2vh;
+  
+}
+#loadingscreen{
+  width: 99%;
+  display: inline-block;
+  height: max-content;
+  position: relative;
+}
+#PageLoader{
+  height: max-content;
+}
 
 
 
@@ -369,87 +399,12 @@ display: inline-block;
 
 
 
-#loadingscreen{
-  display: inline-block;
-  justify-content: center;
-  
-    
-}
 
-  #PageLoader {
-    height: 25vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent
-  }
-  .wave {
-    width: 1vw;
-    height: 90%;
-    background: linear-gradient(45deg, #66e817, #85180b);
-    margin: 10px;
-    animation: wave 1s linear infinite;
-    border-radius: 20px;
-  }
-  .wave:nth-child(2) {
-    animation-delay: 0.1s;
-  }
-  .wave:nth-child(3) {
-    animation-delay: 0.2s;
-  }
-  .wave:nth-child(4) {
-    animation-delay: 0.3s;
-  }
-  .wave:nth-child(5) {
-    animation-delay: 0.4s;
-  }
-  .wave:nth-child(6) {
-    animation-delay: 0.5s;
-  }
-  .wave:nth-child(7) {
-    animation-delay: 0.6s;
-  }
-  .wave:nth-child(8) {
-    animation-delay: 0.7s;
-  }
-  .wave:nth-child(9) {
-    animation-delay: 0.8s;
-  }
-  .wave:nth-child(10) {
-    animation-delay: 0.9s;
-  }
-  
-  @keyframes wave {
-    0% {
-      transform: scale(0);
-    }
-    50% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0);
-    }
-  }
 
-  #loading{
-    color: #66e817;
-    bottom: 0;
-    font-size: 400%;
-    font-family: "Courier", monospace;
-    font-weight: 10;
-    text-align: center;
+ 
   
-  background: linear-gradient(to right, #66e817 20%, #85180b 40%, #85180b 60%, #66e817 80%);
-  background-size: 200% auto;
+
   
-  color: #000;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  
-  animation: shine 3s linear infinite;
-  
-}
 @keyframes shine {
   to {
     background-position: 200% center;
