@@ -26,6 +26,9 @@ document.getElementById('WebName').style.display = "none"
 document.getElementById('FinnaDone').style.display='none'
 document.getElementById('rateboard').style.display = 'none'
 document.getElementById('logo').style.display = "none"
+document.getElementById('bgText').style.display = "none"
+document.getElementById('steammarket').style.display = "none"
+document.getElementById('sponsorNOT').style.display = "none"
 
 
 
@@ -1402,13 +1405,20 @@ var NumForArr = [
 ]
 
 
-function ClickedDown(){
+function ClickedDown(e){
+   document.getElementById(e.target.id).style.boxShadow = '0vh 0vh 0vh rgb(0,0,0,0)'
    
     
     }
+    function ClickedUp(e){
+   document.getElementById(e.target.id).style.boxShadow = '.5vh .5vh 0vh rgb(59, 59, 59),.5vh .5vh 0vh rgb(59, 59, 59)'
+    
+    }
+
 var allbnts = document.getElementsByClassName('bnt')
 for(let i = 0; i<allbnts.length; i++){
-    allbnts[i].addEventListener("click", ClickedDown)
+    allbnts[i].addEventListener("mousedown", ClickedDown)
+    allbnts[i].addEventListener("mouseup", ClickedUp)
 };
 //when user clicks on rating button
 
@@ -1450,6 +1460,9 @@ function loadup(){
 document.getElementById('loadingscreen').style.display = ""
 document.getElementById('SkinOpt').style.display = 'none'
 document.getElementById('gunList').style.display = 'none'
+document.getElementById('bgText').style.display = "none"
+document.getElementById('steammarket').style.display = "none"
+document.getElementById('sponsorNOT').style.display = "none"
 
 //preload images while showing the loading screen
 //and add the current set of skins to curPicAr
@@ -1498,12 +1511,16 @@ function displayRateBoard(){
 
 
 //once prelaod images loaded
+document.getElementById('sponsorNOT').style.display = ""
+document.getElementById('steammarket').style.display = ""
 document.getElementById('logo').style.display = ""
 document.getElementById('WebName').style.display = ""
 document.getElementById('body').style.backgroundColor = 'blue'
 document.getElementById('loadingscreen').style.display = "none"
 document.getElementById('time').style.display = "none"
 document.getElementById('rateboard').style.display = ""
+document.getElementById('bgText').style.display = ""
+
 //display picture
 
 curPic.classList.add('skinClass')
@@ -1540,6 +1557,7 @@ document.querySelectorAll('.bnt').forEach( button => {
             document.getElementById('loading').innerText = 'Loading Final Ratings'
             document.body.style.backgroundImage = ""
             document.body.style.backgroundColor = 'black'
+            document.getElementById('bgText').style.display = "none"
 
             setTimeout(goPage, 1500)
         }
