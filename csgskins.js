@@ -1,3 +1,17 @@
+//autofocus on the newest userreply
+function autofocus(){
+    for(let i = 0; i < document.getElementsByClassName('inputfield').length; i++){
+        if(i = document.getElementsByClassName('inputfield').length-1){
+            document.getElementsByClassName('inputfield')[i].focus()
+            
+        }
+    }
+}
+
+
+
+
+
 
   
   function date(){
@@ -1491,7 +1505,7 @@ var timer = setInterval(function() {
         console.log('post-interval');
     }
      // interval will be cleared after completing this whole block
-  }, 200);
+  }, 150);
 
 
     
@@ -1690,23 +1704,66 @@ for(let i = 0; i < myNode.length; i ++){
 
 
 //exit roatboard function
+let use = document.createElement('div')
+let user = document.createElement('div')
+let userReply = document.createElement('div')
+let inputfield = document.createElement('input')
+
+let AppendNew = document.getElementById('SkinOpt')
+
+
+
+
+
 document.getElementById('exit').addEventListener("click", function(){
 
 
-
-document.getElementById('gunOPTS').classList.remove("textAnimation") 
 document.getElementById('SkinOpt').style.display = ""
-
 document.getElementById('rateboard').style.display = "none"
 document.getElementById('loadingscreen').style.display = "none"
 document.getElementById('FinnaDone').style.display = "none"
-document.body.style.backgroundImage = ""
-document.body.style.backgroundColor = 'black'
+document.getElementById('bgText').style.display = "none"
+document.getElementById('steammarket').style.display = "none"
+document.getElementById('sponsorNOT').style.display = "none"
+document.getElementById('WebName').style.display = "none"
+document.getElementById('logo').style.display = "none"
+
+
+document.getElementById('time').style.display = ""
+document.getElementById('gunList').style.display = ""
+document.getElementById('body').style.backgroundColor = "rgb(2, 5, 3)";
 const removeSkin = document.querySelectorAll('.skinClass');
 removeSkin.forEach(box => {
     box.remove();
 });
 
+//generate a new user reply div and disable the old one
+
+//disable the input fields 
+for(let i = 0; i < document.getElementsByClassName('inputfield').length; i++){
+    document.getElementsByClassName('inputfield')[i].disabled = true
+}
+
+
+
+inputfield.classList.add('inputfield')
+inputfield.type = "text"
+inputfield.setAttribute('onkeydown', 'enter(this)')
+inputfield.autocomplete='off'
+
+
+userReply.classList.add('UserReply')
+user.classList.add('User')
+user.innerText = "C:\\Users\\Player>"
+use.classList.add('use')
+
+userReply.appendChild(inputfield)
+use.appendChild(user)
+use.appendChild(userReply)
+AppendNew.append(use)
+
+document.getElementById('PageLoader').innerHTML = ""
+autofocus()
 
 indexNum = 0
 curIMG = []

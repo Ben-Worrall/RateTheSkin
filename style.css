@@ -280,16 +280,16 @@ display: inline-block;
      font-size: 135%;
    }
    
-   #User{
+   .User{
     display: inline-block;
       font-size: 130%;
       color: #00ff00;
       text-shadow:0vh 0vh 3vh rgb(48, 141, 48),0vh 0vh 3vh rgb(52, 131, 52);
       font-family: Consolas,monaco,monospace; 
     }
-    #UserReply{
+    .UserReply{
       display: inline-block;
-      margin: 0.7%;
+      margin:1%;
        color: #00ff00;
        
        font-family: 'Courier', 'Courier New', 'Lucida Console';
@@ -300,7 +300,8 @@ display: inline-block;
        
      }
 
-#inputfield{
+.inputfield{
+  display: inline-block;
       color: #00ff00;
       border: 10px solid rgb(2, 5, 3);
        text-shadow:0vh 0vh 0.6vh rgb(48, 141, 48),0vh 0vh 0.6vh rgb(52, 131, 52);
