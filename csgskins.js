@@ -1539,10 +1539,7 @@ document.getElementById('bgText').style.display = ""
 
 curPic.classList.add('skinClass')
 
-let indexNum = i
-for(let k = 0; k < LIST[indexNum].length; k++){
-    curPicAr.push(LIST[indexNum][k])
-}
+ //console.log(curPicAr)
 curPic.src = curPicAr[0]
 rateboard.appendChild(curPic)
 
@@ -1555,30 +1552,25 @@ rateboard.appendChild(curPic)
 //when click on button, change to next picture
 document.querySelectorAll('.bnt').forEach( button => {
     button.onclick = function () {
-
         
+
         //if nothing is in the picture array, then exit and go back to main screen adn display popup with the rateboar
         if(curPicAr.length == 1){
             curPic.alt = button.innerText
             FinalAR.push(curPic.src)
-        FinalAR.push(curPic.alt)
+            FinalAR.push(curPic.alt)
 
-        //show loadup animation then display the final popup with the all the ratings
-        function Showanimation(){
-            document.getElementById('loadingscreen').style.display = ""
-            document.getElementById('WebName').style.display = "none"
-            document.getElementById('rateboard').style.display = "none"
-            document.getElementById('loading').innerText = 'Loading Final Ratings'
-            document.body.style.backgroundImage = ""
-            document.body.style.backgroundColor = 'black'
-            document.getElementById('bgText').style.display = "none"
+       
 
-            setTimeout(goPage, 1500)
-        }
-        Showanimation()
-
-            //show popup with the rating
-            function goPage(){
+            
+                document.getElementById('SkinOpt').style.display = "none"
+                document.getElementById('gunList').style.display = "none"
+                document.getElementById('time').style.display = "none"
+                document.getElementById('WebName').style.display = ""
+                document.getElementById('logo').style.display = "none"
+                document.getElementById('bgText').style.display = "none"
+                document.getElementById('steammarket').style.display = "none"
+                document.getElementById('sponsorNOT').style.display = "none"
                 document.getElementById('loadingscreen').style.display = "none"
                 
                 //display the final rating board
@@ -1614,16 +1606,15 @@ document.querySelectorAll('.bnt').forEach( button => {
 
                 j++
                }
-               
 
-
-              
-
-            }
+            
             
             
            
 
+        } else {
+            first()
+            console.log(curPicAr)
         }
 
 
@@ -1634,61 +1625,97 @@ document.querySelectorAll('.bnt').forEach( button => {
 
         function first(){
         //console.log('current image pushed to finalAr')
-        console.log(curPicAr[0])
+        console.log(curPic)
         curPic.alt = button.innerText
         FinalAR.push(curPic.src)
         FinalAR.push(curPic.alt)
         //console.log(FinalAR[FinalAR.length-1])
         curPicAr.splice(0,1)
-        setTimeout(second, 1)
+        setTimeout(second, 10)
         //console.log(LIST[indexNum])
         }
         
          function second(){
         curPic.src = curPicAr[0]
-       // console.log(FinalAR[FinalAR.length - 1])
-        //console.log(FinalAR[FinalAR.length - 2])
-        
-        
-        
+       
          }
-    first()
+    
         
         
         
         
         
 
-        //if images run out
+      
         
 }
 })
 
+let use = document.createElement('div')
+let user = document.createElement('div')
+let userReply = document.createElement('div')
+let inputfield = document.createElement('input')
 
+let AppendNew = document.getElementById('SkinOpt')
 
  //back button
 document.getElementById('Back').addEventListener('click', ()=>{
 
+    document.getElementById('SkinOpt').style.display = ""
+    document.getElementById('FinnaDone').style.display = "none"
+    document.getElementById('rateboard').style.display = "none"
+    document.getElementById('loadingscreen').style.display = "none"
+    document.getElementById('FinnaDone').style.display = "none"
+    document.getElementById('bgText').style.display = "none"
+    document.getElementById('steammarket').style.display = "none"
+    document.getElementById('sponsorNOT').style.display = "none"
+    document.getElementById('WebName').style.display = "none"
+    document.getElementById('logo').style.display = "none"
+    
+    
+    document.getElementById('time').style.display = ""
+    document.getElementById('gunList').style.display = ""
+    document.getElementById('body').style.backgroundColor = "rgb(2, 5, 3)";
+    const removeSkin = document.querySelectorAll('.skinClass');
+    removeSkin.forEach(box => {
+        box.remove();
+    });
+    
+    //generate a new user reply div and disable the old one
+    
+    //disable the input fields 
+    for(let i = 0; i < document.getElementsByClassName('inputfield').length; i++){
+        document.getElementsByClassName('inputfield')[i].disabled = true
+    }
+    
+    
+    
+    inputfield.classList.add('inputfield')
+    inputfield.type = "text"
+    inputfield.setAttribute('onkeydown', 'enter(this)')
+    inputfield.autocomplete='off'
+    
+    
+    userReply.classList.add('UserReply')
+    user.classList.add('User')
+    user.innerText = "C:\\Users\\Player>"
+    use.classList.add('use')
+    
+    userReply.appendChild(inputfield)
+    use.appendChild(user)
+    use.appendChild(userReply)
+    AppendNew.append(use)
+    
+    document.getElementById('PageLoader').innerHTML = ""
+    autofocus()
+    
+    indexNum = 0
+    curIMG = []
+    curPic = []
+    curPicAr = []
+    FinalAR = []
 
 
-document.getElementById('gunOPTS').classList.remove("textAnimation") 
-document.getElementById('SkinOpt').style.display = ""
-document.getElementById('rateboard').style.display = "none"
-document.getElementById('loadingscreen').style.display = "none"
-document.getElementById('FinnaDone').style.display = "none"
-document.body.style.backgroundImage = ""
-document.body.style.backgroundColor = 'black'
-const removeSkin = document.querySelectorAll('.skinClass');
-removeSkin.forEach(box => {
-    box.remove();
-});
-
-
-indexNum = 0
-curIMG = []
-curPic = []
-curPicAr = []
-FinalAR = []
 //remove skins from the final ratings board
 let myNode = document.querySelectorAll('.sorted')
 for(let i = 0; i < myNode.length; i ++){
@@ -1704,20 +1731,8 @@ for(let i = 0; i < myNode.length; i ++){
 
 
 //exit roatboard function
-let use = document.createElement('div')
-let user = document.createElement('div')
-let userReply = document.createElement('div')
-let inputfield = document.createElement('input')
-
-let AppendNew = document.getElementById('SkinOpt')
-
-
-
-
 
 document.getElementById('exit').addEventListener("click", function(){
-
-
 document.getElementById('SkinOpt').style.display = ""
 document.getElementById('rateboard').style.display = "none"
 document.getElementById('loadingscreen').style.display = "none"
