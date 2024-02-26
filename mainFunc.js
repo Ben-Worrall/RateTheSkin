@@ -10,7 +10,7 @@ for(let i = 0; i < numList.length; i++){
       for(let l = 0; l < numList.length; l++){
         let Curl = numList[l]
         num++
-        //console.log(Curi + Curj + Curk+ Curl,' ran this for the',num, 'time') 
+        // yes console.log(Curi + Curj + Curk+ Curl,' ran this for the',num, 'time') 
         if(Curi == Answer[0] && Curj == Answer[1] && Curk == Answer[2] && Curl == Answer[3]){
           console.log('you found the answer, it is:', Curi, Curj, Curk, Curl)
           break

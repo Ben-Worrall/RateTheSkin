@@ -1419,12 +1419,12 @@ var NumForArr = [
 ]
 
 
-function ClickedDown(e){
+function ClickedDown(){
    document.getElementById(e.target.id).style.boxShadow = '0vh 0vh 0vh rgb(0,0,0,0)'
    
     
     }
-    function ClickedUp(e){
+    function ClickedUp(){
    document.getElementById(e.target.id).style.boxShadow = '.5vh .5vh 0vh rgb(59, 59, 59),.5vh .5vh 0vh rgb(59, 59, 59)'
     
     }
